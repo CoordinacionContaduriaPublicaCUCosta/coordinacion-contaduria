@@ -165,7 +165,7 @@ footer.footer {
 }
 
 .contact-img {
-  width: 200px;      /* ancho fijo más pequeño */
+  width: 250px;      /* ancho fijo más pequeño */
   height: auto;      /* mantiene proporción */
   display: block;
   margin: 10px 0;

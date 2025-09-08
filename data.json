@@ -34,6 +34,10 @@
     {
       "pregunta": "¿Ya te diste de alta en el IMSS?",
       "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/AFILIATE_AL_IMSS_2023.pdf' target='_blank'>Descargar PDF</a>"
+    },
+    {
+      "pregunta": "¿Necesitas tramitar alguna constancia?",
+      "respuesta": "Si necesitas tramitar una constancia, puedes descargar el instructivo aquí: <a href='docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf' target='_blank'>Descargar PDF</a>"
     }
 
   ],
