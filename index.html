@@ -1,12 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coordinación de Contaduría Pública</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="theme-color" content="#0b5f73" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
@@ -19,35 +17,42 @@
   </header>
 
   <main class="container">
-    <section id="horario" class="card">
+
+    <!-- Horario -->
+    <section class="card">
       <h2>Horario de atención</h2>
-      <div id="horario-content">Cargando horario...</div>
+      <div id="horario-content"></div>
     </section>
 
-    <section id="tramites" class="card">
+    <!-- Trámites -->
+    <section class="card">
       <h2>Trámites</h2>
-      <ul id="tramites-list">Cargando trámites...</ul>
+      <div id="tramites-content"></div>
     </section>
 
-    <section id="reglamentos" class="card">
+    <!-- Reglamentos -->
+    <section class="card">
       <h2>Reglamentos</h2>
-      <div id="reglamentos-content">Cargando reglamentos...</div>
+      <div id="reglamentos-content"></div>
     </section>
 
-    <section id="faq" class="card">
+    <!-- FAQ -->
+    <section class="card">
       <h2>Preguntas frecuentes</h2>
-      <div id="faq-list"></div>
+      <div id="faq-content"></div>
     </section>
 
-    <section class="card small">
-      <h3>Acceso rápido</h3>
-      <a class="btn" href="contacto.html">Contacto</a>
-      <a class="btn" href="chat.html">Chat</a>
+    <!-- Contacto rápido -->
+    <section class="card">
+      <h2>Contacto</h2>
+      <p><strong>Correo:</strong> <span id="correo-display"></span></p>
+      <p><strong>Teléfono:</strong> <span id="telefono-display"></span></p>
+      <p><strong>WhatsApp:</strong> <span id="whatsapp-display"></span></p>
     </section>
+
   </main>
-
   <footer class="footer">
-    <small>Aplicación gratuita · Hecho para la coordinación</small>
+    Aplicación gratuita · Coordinación de Contaduría Pública
   </footer>
 
   <script src="script.js"></script>
