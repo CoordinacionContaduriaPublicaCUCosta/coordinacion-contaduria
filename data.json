@@ -31,14 +31,6 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Dónde puedo tramitar una constancia?",
-      "respuesta": "En la sección de trámites está la información; acude en horario de atención."
-    },
-    {
-      "pregunta": "¿Puedo enviar documentos por correo?",
-      "respuesta": "Sí, envía un correo con los archivos escaneados adjuntos."
-    },
-    {
       "pregunta": "¿Deseo tomar protesta, qué necesito?",
       "respuesta": "Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
     }
