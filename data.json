@@ -1,7 +1,12 @@
 {
   "horario": {
-    "dias": "Lunes a Viernes",
-    "horas": "09:00 - 14:00"
+    "lunes": "9:00 a.m. - 6:00 p.m.",
+    "martes": "9:00 a.m. - 6:00 p.m.",
+    "miércoles": "9:00 a.m. - 6:00 p.m.",
+    "jueves": "9:00 a.m. - 6:00 p.m.",
+    "viernes": "9:00 a.m. - 6:00 p.m.",
+    "sábado": "Cerrado",
+    "domingo": "Cerrado"
   },
   "tramites": [
     {
@@ -33,6 +38,10 @@
     {
       "pregunta": "¿Deseo tomar protesta, qué necesito?",
       "respuesta": "Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    },
+    {
+      "pregunta": "¿Cuál es el horario de atención?",
+      "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
     }
   ],
   "contacto": {

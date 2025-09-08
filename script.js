@@ -4,9 +4,13 @@ async function loadData() {
     const data = await resp.json();
 
     // Horario
-    document.getElementById('horario-content').innerHTML =
-      `<p><strong>Días:</strong> ${data.horario.dias}</p>
-       <p><strong>Horas:</strong> ${data.horario.horas}</p>`;
+    const horarioEl = document.getElementById('horario-content');
+    horarioEl.innerHTML = '';
+    for (let dia in data.horario) {
+      const li = document.createElement('li');
+      li.textContent = `${capitalize(dia)}: ${data.horario[dia]}`;
+      horarioEl.appendChild(li);
+    }
 
     // Trámites
     const tramitesEl = document.getElementById('tramites-content');
@@ -14,7 +18,7 @@ async function loadData() {
     data.tramites.forEach(t => {
       const div = document.createElement('div');
       div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
-      div.style.marginBottom = "10px";
+      div.classList.add('item-card');
       tramitesEl.appendChild(div);
     });
 
@@ -33,7 +37,7 @@ async function loadData() {
     data.faq.forEach(f => {
       const div = document.createElement('div');
       div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
-      div.style.marginBottom = "10px";
+      div.classList.add('item-card');
       faqEl.appendChild(div);
     });
 
@@ -45,6 +49,10 @@ async function loadData() {
   } catch (err) {
     console.error('Error al cargar data.json:', err);
   }
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 window.addEventListener('DOMContentLoaded', loadData);
