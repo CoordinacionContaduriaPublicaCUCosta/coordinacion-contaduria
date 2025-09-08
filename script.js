@@ -62,13 +62,14 @@ function initChatBot(){
   const chatForm = document.getElementById('chat-form');
   const chatBox = document.getElementById('chat-box');
 
-  const rules = [
-    {q:['horario','hora','horas'], a:'Nuestro horario de atención es de lunes a viernes, 9:00 a 14:00.'},
-    {q:['trámite','tramite','tramites'], a:'Puedes ver la lista de trámites en la sección "Trámites" de la página principal.'},
-    {q:['reglamento','reglamentos'], a:'Los reglamentos están disponibles en la sección "Reglamentos". Si deseas, podemos enviártelos por correo.'},
-    {q:['contacto','teléfono','telefono','correo','email'], a:'Puedes contactarnos por correo o WhatsApp desde la página de contacto.'},
-    {q:['gracias','ok','perfecto'], a:'Con gusto. ¿Necesitas algo más?'}
-  ];
+const rules = [
+  {q:['horario','hora','horas'], a:'Nuestro horario de atención es de lunes a viernes, 9:00 a 14:00.'},
+  {q:['trámite','tramite','tramites'], a:'Puedes ver la lista de trámites en la sección "Trámites" de la página principal.'},
+  {q:['reglamento','reglamentos'], a:'Los reglamentos están disponibles en la sección "Reglamentos". Si deseas, podemos enviártelos por correo.'},
+  {q:['contacto','teléfono','telefono','correo','email'], a:'Puedes contactarnos por correo o WhatsApp desde la página de contacto.'},
+  {q:['protesta','toma de protesta'], a:'Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación.'},
+  {q:['gracias','ok','perfecto'], a:'Con gusto. ¿Necesitas algo más?'}
+];
 
   function botReply(text){
     const t = text.toLowerCase();

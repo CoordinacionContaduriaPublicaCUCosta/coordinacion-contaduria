@@ -4,22 +4,48 @@
     "horas": "09:00 - 14:00"
   },
   "tramites": [
-    {"titulo":"Constancia de materias","descripcion":"Solicitud y emisión de constancia."},
-    {"titulo":"Aprobación de prácticas","descripcion":"Trámite de autorización para prácticas contables."},
-    {"titulo":"Baja de estudiantes","descripcion":"Proceso y requisitos para dar de baja."}
+    {
+      "titulo": "Constancia de materias",
+      "descripcion": "Solicitud y emisión de constancia."
+    },
+    {
+      "titulo": "Aprobación de prácticas",
+      "descripcion": "Trámite de autorización para prácticas contables."
+    },
+    {
+      "titulo": "Baja de estudiantes",
+      "descripcion": "Proceso y requisitos para dar de baja."
+    },
+    {
+      "titulo": "Toma de protesta",
+      "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    }
   ],
   "reglamentos": [
-    "Reglamento interno de la coordinación (Artículo 1 ...)",
-    "Normas de atención al público y conducta",
-    "Procedimiento para recepción de documentos"
+    "Reglamento General de Evaluación y Promoción de Alumnos",
+    "Artículo 53. Los alumnos podrán justificar su falta de asistencia a clases por alguna de las siguientes causas:",
+    "I. Por enfermedad (con comprobante de haber acudido al IMSS);",
+    "II. Por el cumplimiento de una comisión conferida por autoridad universitaria, con conocimiento del Coordinador de Carrera.",
+    "III. Por causa de fuerza mayor justificada que impida al alumno asistir, a juicio del Coordinador de Carrera.",
+    "El máximo de faltas de asistencia a clases que se pueden justificar a un alumno no excederá del 20 % del total de horas establecidas en el programa de la materia."
   ],
   "faq": [
-    {"pregunta":"¿Dónde puedo tramitar una constancia?","respuesta":"En la sección de trámites está la información; acude en horario de atención."},
-    {"pregunta":"¿Puedo enviar documentos por correo?","respuesta":"Sí, envía un correo con los archivos escaneados adjuntos."}
+    {
+      "pregunta": "¿Dónde puedo tramitar una constancia?",
+      "respuesta": "En la sección de trámites está la información; acude en horario de atención."
+    },
+    {
+      "pregunta": "¿Puedo enviar documentos por correo?",
+      "respuesta": "Sí, envía un correo con los archivos escaneados adjuntos."
+    },
+    {
+      "pregunta": "¿Deseo tomar protesta, qué necesito?",
+      "respuesta": "Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    }
   ],
   "contacto": {
-    "email":"coordinacion@ejemplo.com",
-    "phone":"+5213220000000",
-    "whatsapp":"5213220000000"
+    "email": "coordinacion@ejemplo.com",
+    "phone": "+5213220000000",
+    "whatsapp": "5213220000000"
   }
 }
