@@ -27,6 +27,15 @@ async function loadFAQ() {
   }
 }
 
+function appendMessage(sender, message) {
+  const chatBox = document.getElementById('chat-box');
+  const div = document.createElement('div');
+  div.classList.add('chat-message', sender);
+  div.textContent = message;
+  chatBox.appendChild(div);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 function getAnswer(userMessage) {
   const msg = userMessage.toLowerCase();
 
@@ -37,12 +46,6 @@ function getAnswer(userMessage) {
       horarioText += `${capitalize(dia)}: ${horarioData[dia]}\n`;
     }
     return horarioText;
-  }
-
-  // Pregunta especial: constancia
-  if (msg.includes("constancia")) {
-    return `Para tramitar una constancia, descarga el formato aquí: 
-    <a href="docs/constancia.pdf" target="_blank">Descargar Constancia</a>`;
   }
 
   // Buscar en FAQ
@@ -61,12 +64,28 @@ function appendMessage(sender, message) {
   const div = document.createElement('div');
   div.classList.add('chat-message', sender);
 
-  // Detectar si hay link a PDF
+  // Detectar enlaces PDF
   if (message.includes('docs/')) {
-    div.innerHTML = message.replace(
-      /<a href="([^"]+)"[^>]*>[^<]+<\/a>/g,
-      `<a href="$1" target="_blank" class="pdf-btn">📄 Descargar PDF</a>`
-    );
+    const regex = /href=['"]([^'"]+)['"]/g;
+    let match;
+    let lastIndex = 0;
+    while ((match = regex.exec(message)) !== null) {
+      // Texto antes del link
+      const text = message.substring(lastIndex, match.index);
+      div.innerHTML += text;
+
+      // Crear botón
+      const btn = document.createElement('a');
+      btn.href = match[1];
+      btn.target = '_blank';
+      btn.textContent = '📄 Descargar PDF';
+      btn.classList.add('pdf-btn');
+      div.appendChild(btn);
+
+      lastIndex = regex.lastIndex;
+    }
+    // Agregar texto restante
+    div.innerHTML += message.substring(lastIndex);
   } else {
     div.innerHTML = message;
   }
@@ -74,6 +93,7 @@ function appendMessage(sender, message) {
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
 
 function handleSend() {
   const input = document.getElementById('user-input');
