@@ -32,14 +32,19 @@ async function loadData() {
     });
 
     // FAQ
-    const faqEl = document.getElementById('faq-content');
-    faqEl.innerHTML = '';
-    data.faq.forEach(f => {
-      const div = document.createElement('div');
-      div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
-      div.classList.add('item-card');
-      faqEl.appendChild(div);
+    const faqContainer = document.getElementById('faq-container');
+
+    faqData.forEach(faq => {
+    const div = document.createElement('div');
+    div.classList.add('faq-item');
+
+      const p = document.createElement('p');
+      p.textContent = faq.pregunta; // Solo la pregunta
+      div.appendChild(p);
+
+      faqContainer.appendChild(div);
     });
+
 
     // Contacto
     document.getElementById('correo-display').textContent = data.contacto.email;

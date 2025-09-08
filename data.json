@@ -38,6 +38,10 @@
     {
       "pregunta": "¿Necesitas tramitar alguna constancia?",
       "respuesta": "Si necesitas tramitar una constancia, puedes descargar el instructivo aquí: <a href='docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf' target='_blank'>Descargar PDF</a>"
+    },
+    {
+      "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, que debes de hacer?",
+      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. Puedes descargar las instrucciones aquí: <a href='docs/Denuncia_ante_la_fiscalia.pdf' target='_blank'>Descargar PDF</a>"
     }
 
   ],
