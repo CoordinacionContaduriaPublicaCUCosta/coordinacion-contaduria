@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contacto - Coordinación</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Link a Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yx0F4sK5s..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header class="topbar">
@@ -17,22 +19,33 @@
   </header>
 
   <main class="container">
-<section class="card">
-  <h2>Información de contacto</h2>
-  <!-- Imagen de la coordinación -->
-  <img src="images/Foto_Contaduria.jpeg" alt="Información de la Coordinación" class="contact-img" />
-  
-  <p><strong>Correos:</strong></p>
-  <ul>
-    <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a></li>
-    <li><a href="mailto:aida@cuc.udg.mx">aida@cuc.udg.mx</a></li>
-  </ul>
-  <p><strong>Teléfonos:</strong></p>
-  <ul>
-    <li>Asistente de Coordinación: <a href="tel:+523222262223">+52 322 226 2223</a></li>
-    <li>Mtra. Iris: <a href="tel:+523222262318">+52 22 226 2318 </a></li>
-  </ul>  <p><strong>WhatsApp:</strong> <a href="https://wa.me/523220000000" target="_blank">Enviar WhatsApp</a></p>
-</section>
+
+    <!-- Hero / presentación -->
+    <section class="hero-card">
+      <img src="images/Foto_Contaduria.jpeg" alt="Coordinación de Contaduría" class="hero-img" />
+      <div class="hero-text">
+        <h2><i class="fas fa-user-tie"></i> información de Contacto la Coordinación de Contaduría</h2>
+        <p>Brindamos información y contacto con el personal administrativo.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <p><strong><i class="fas fa-envelope"></i> Correos:</strong></p>
+      <ul>
+        <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a></li>
+        <li><a href="mailto:aida@cuc.udg.mx">aida@cuc.udg.mx</a></li>
+      </ul>
+
+      <p><strong><i class="fas fa-phone"></i> Teléfonos:</strong></p>
+      <ul>
+        <li>Asistente de Coordinación: <a href="tel:+523222262223">+52 322 226 2223</a></li>
+        <li>Mtra. Iris: <a href="tel:+523222262318">+52 322 226 2318</a></li>
+      </ul>
+
+      <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 
+        <a href="https://wa.me/523220000000" target="_blank">Enviar WhatsApp</a>
+      </p>
+    </section>
 
   </main>
 
@@ -42,21 +55,30 @@
 
   <script>
     // Formulario gratuito usando mailto
-    document.getElementById('contact-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-      const subject = encodeURIComponent(`Mensaje desde la Coordinación: ${name}`);
-      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
+        const subject = encodeURIComponent(`Mensaje desde la Coordinación: ${name}`);
+        const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
 
-      // Abrir cliente de correo
-      window.location.href = `mailto:coordinacion@ejemplo.com?subject=${subject}&body=${body}`;
-      
-      document.getElementById('form-result').textContent = "Se abrió tu cliente de correo para enviar el mensaje.";
-      document.getElementById('contact-form').reset();
-    });
+        // Abrir cliente de correo
+        window.location.href = `mailto:coordinacion@ejemplo.com?subject=${subject}&body=${body}`;
+        
+        const resultEl = document.getElementById('form-result');
+        if(resultEl) resultEl.textContent = "Se abrió tu cliente de correo para enviar el mensaje.";
+        form.reset();
+      });
+    }
+
+    // Función para capitalizar texto (puede usarse en otros scripts)
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
   </script>
 </body>
 </html>
