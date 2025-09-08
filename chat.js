@@ -59,6 +59,29 @@ function getAnswer(userMessage) {
   return "Lo siento, no tengo la respuesta a esa pregunta. Intenta con otra o revisa la sección de FAQ.";
 }
 
+function appendMessage(sender, message) {
+  const chatBox = document.getElementById('chat-box');
+  const div = document.createElement('div');
+  div.classList.add('chat-message', sender);
+
+  // Si la respuesta contiene un link a PDF, lo convertimos en botón
+  if (message.includes('docs/AFILIATE_AL_IMSS_2023.pdf')) {
+    const btn = document.createElement('a');
+    btn.href = 'docs/AFILIATE_AL_IMSS_2023.pdf';
+    btn.target = '_blank';
+    btn.textContent = '📄 Descargar PDF IMSS 2023';
+    btn.classList.add('pdf-btn');
+    div.textContent = message.split('<a')[0]; // mantiene el texto antes del link
+    div.appendChild(btn);
+  } else {
+    div.innerHTML = message;
+  }
+
+  chatBox.appendChild(div);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+
 function handleSend() {
   const input = document.getElementById('user-input');
   const message = input.value.trim();

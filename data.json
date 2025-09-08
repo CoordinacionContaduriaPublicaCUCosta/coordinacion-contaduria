@@ -10,18 +10,6 @@
   },
   "tramites": [
     {
-      "titulo": "Constancia de materias",
-      "descripcion": "Solicitud y emisión de constancia."
-    },
-    {
-      "titulo": "Aprobación de prácticas",
-      "descripcion": "Trámite de autorización para prácticas contables."
-    },
-    {
-      "titulo": "Baja de estudiantes",
-      "descripcion": "Proceso y requisitos para dar de baja."
-    },
-    {
       "titulo": "Toma de protesta",
       "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
     }
@@ -42,7 +30,12 @@
     {
       "pregunta": "¿Cuál es el horario de atención?",
       "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
+    },
+    {
+      "pregunta": "¿Ya te diste de alta en el IMSS?",
+      "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/IMSS_instructivo.pdf' target='_blank'>Descargar PDF</a>"
     }
+    
   ],
   "contacto": {
     "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],

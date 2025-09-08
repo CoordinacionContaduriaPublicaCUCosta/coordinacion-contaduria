@@ -131,3 +131,19 @@ footer.footer {
 .faq-btn:hover {
   background: #005fa3;
 }
+
+.pdf-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pdf-btn:hover {
+  background-color: #005fa3;
+}
