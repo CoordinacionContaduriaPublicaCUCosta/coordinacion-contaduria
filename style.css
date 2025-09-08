@@ -163,3 +163,13 @@ footer.footer {
 .pdf-btn:hover {
   background-color: #005fa3;
 }
+
+.contact-img {
+  width: 100%;      /* ocupa todo el ancho del card */
+  max-width: 400px; /* tamaño máximo */
+  height: auto;     /* mantiene proporción */
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
