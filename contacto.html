@@ -19,23 +19,26 @@
   <main class="container">
     <section class="card">
       <h2>Información de contacto</h2>
-      <p><strong>Correo:</strong> <a id="correo-link" href="mailto:coordinacion@ejemplo.com">coordinacion@ejemplo.com</a></p>
-      <p><strong>Teléfono:</strong> <a id="tel-link" href="tel:+5213220000000">+52 1 322 000 0000</a></p>
-      <p><strong>WhatsApp:</strong> <a id="wa-link" href="#" target="_blank">Enviar WhatsApp</a></p>
-      <p class="muted">Reemplaza los datos en <code>data.json</code> por los reales.</p>
+      <p><strong>Correos:</strong></p>
+      <ul>
+        <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a></li>
+        <li><a href="mailto:aida@cuc.udg.mx">aida@cuc.udg.mx</a></li>
+      </ul>
+      <p><strong>Teléfono:</strong> <a href="tel:+5213220000000">+52 1 322 000 0000</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5213220000000" target="_blank">Enviar WhatsApp</a></p>
     </section>
 
     <section class="card">
-      <h2>Contacto vía formulario (envía por correo)</h2>
+      <h2>Contacto vía formulario rápido</h2>
       <form id="contact-form">
         <label>Nombre
-          <input required type="text" id="name" />
+          <input required type="text" id="name" placeholder="Tu nombre" />
         </label>
         <label>Correo
-          <input required type="email" id="email" />
+          <input required type="email" id="email" placeholder="tu@email.com" />
         </label>
         <label>Mensaje
-          <textarea required id="message"></textarea>
+          <textarea required id="message" placeholder="Escribe tu mensaje"></textarea>
         </label>
         <button class="btn" type="submit">Enviar</button>
       </form>
@@ -47,6 +50,23 @@
     <small>Aplicación gratuita</small>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Formulario gratuito usando mailto
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Mensaje desde la Coordinación: ${name}`);
+      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
+
+      // Abrir cliente de correo
+      window.location.href = `mailto:coordinacion@ejemplo.com?subject=${subject}&body=${body}`;
+      
+      document.getElementById('form-result').textContent = "Se abrió tu cliente de correo para enviar el mensaje.";
+      document.getElementById('contact-form').reset();
+    });
+  </script>
 </body>
 </html>
