@@ -45,7 +45,7 @@
     }
   ],
   "contacto": {
-    "email": "coordinacion@ejemplo.com",
+    "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],
     "phone": "+5213220000000",
     "whatsapp": "5213220000000"
   }

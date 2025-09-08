@@ -1,5 +1,5 @@
 let faqData = [];
-let horarioData = {};
+let horarioData = [];
 
 async function loadFAQ() {
   try {
@@ -7,8 +7,23 @@ async function loadFAQ() {
     const data = await resp.json();
     faqData = data.faq;
     horarioData = data.horario;
+
+    // Crear botones rápidos para FAQ
+    const buttonsDiv = document.getElementById('chat-buttons');
+    buttonsDiv.innerHTML = '';
+    faqData.forEach(f => {
+      const btn = document.createElement('button');
+      btn.textContent = f.pregunta;
+      btn.classList.add('faq-btn');
+      btn.onclick = () => {
+        appendMessage('user', f.pregunta);
+        appendMessage('bot', f.respuesta);
+      };
+      buttonsDiv.appendChild(btn);
+    });
+
   } catch(err) {
-    console.error('Error al cargar data.json:', err);
+    console.error('Error al cargar FAQ:', err);
   }
 }
 
@@ -41,7 +56,6 @@ function getAnswer(userMessage) {
     }
   }
 
-  // Respuesta por defecto
   return "Lo siento, no tengo la respuesta a esa pregunta. Intenta con otra o revisa la sección de FAQ.";
 }
 
