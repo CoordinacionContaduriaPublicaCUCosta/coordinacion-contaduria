@@ -173,3 +173,17 @@ footer.footer {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+.btn-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.btn-link:hover {
+  background-color: #005fa3;
+}
