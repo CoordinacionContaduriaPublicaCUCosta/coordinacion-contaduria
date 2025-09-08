@@ -1,5 +1,6 @@
 let faqData = [];
 let horarioData = [];
+let lastMessage = ""; // Para evitar repetir la misma pregunta
 
 async function loadFAQ() {
   try {
@@ -15,10 +16,7 @@ async function loadFAQ() {
       const btn = document.createElement('button');
       btn.textContent = f.pregunta;
       btn.classList.add('faq-btn');
-      btn.onclick = () => {
-        appendMessage('user', f.pregunta);
-        appendMessage('bot', f.respuesta, f.pdf);
-      };
+      btn.onclick = () => sendMessage(f.pregunta);
       buttonsDiv.appendChild(btn);
     });
 
@@ -27,14 +25,54 @@ async function loadFAQ() {
   }
 }
 
-// appendMessage ahora acepta PDF opcional
-function appendMessage(sender, message, pdf) {
+// Función principal para enviar mensaje
+function sendMessage(message) {
+  const input = document.getElementById('user-input');
+
+  if(message.trim() === "") return;
+
+  // Evitar enviar el mismo mensaje consecutivo
+  if(message.trim() === lastMessage) {
+    alert("No puedes enviar la misma pregunta consecutivamente.");
+    return;
+  }
+
+  lastMessage = message.trim();
+  appendMessage('user', message);
+
+  // Mostrar animación de espera
+  const typingDiv = appendMessage('bot', "Escribiendo...", null, true);
+
+  // Esperar 3 segundos antes de mostrar la respuesta real
+  setTimeout(() => {
+    typingDiv.remove(); // quitar animación de espera
+    const answer = getAnswer(message);
+    appendMessage('bot', answer.respuesta, answer.pdf);
+  }, 3000);
+
+  input.value = '';
+  input.focus();
+}
+
+// appendMessage acepta un PDF opcional y flag de espera
+function appendMessage(sender, message, pdf = null, isTyping = false) {
   const chatBox = document.getElementById('chat-box');
   const div = document.createElement('div');
   div.classList.add('chat-message', sender);
 
-  div.textContent = message;
+  // Crear icono
+  const icon = document.createElement('span');
+  icon.classList.add('chat-icon');
+  icon.textContent = sender === 'user' ? '🧑' : '🤖';
+  div.appendChild(icon);
 
+  // Crear contenido del mensaje
+  const content = document.createElement('span');
+  content.classList.add('chat-content');
+  content.textContent = message;
+  div.appendChild(content);
+
+  // Si hay PDF, agregamos botón
   if(pdf){
     const pdfBtn = document.createElement('a');
     pdfBtn.href = pdf;
@@ -45,8 +83,12 @@ function appendMessage(sender, message, pdf) {
     div.appendChild(pdfBtn);
   }
 
+  if(isTyping) div.classList.add('typing'); // clase para animación
+
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
+
+  return div; // si es animación, devolvemos el div para quitarlo después
 }
 
 function getAnswer(userMessage) {
@@ -72,27 +114,14 @@ function getAnswer(userMessage) {
   return { respuesta: "Lo siento, no tengo la respuesta a esa pregunta. Intenta con otra o revisa la sección de FAQ." };
 }
 
-function handleSend() {
-  const input = document.getElementById('user-input');
-  const message = input.value.trim();
-  if(message === '') return;
-
-  appendMessage('user', message);
-  let answer = getAnswer(message);
-
-  setTimeout(() => appendMessage('bot', answer.respuesta, answer.pdf), 500);
-
-  input.value = '';
-  input.focus();
-}
-
 function capitalize(str){
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-document.getElementById('send-btn').addEventListener('click', handleSend);
+// Eventos de input
+document.getElementById('send-btn').addEventListener('click', () => sendMessage(document.getElementById('user-input').value));
 document.getElementById('user-input').addEventListener('keypress', function(e){
-  if(e.key === 'Enter') handleSend();
+  if(e.key === 'Enter') sendMessage(document.getElementById('user-input').value);
 });
 
 window.addEventListener('DOMContentLoaded', loadFAQ);

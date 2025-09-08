@@ -263,3 +263,35 @@ footer.footer {
     font-size: 1.4em;
   }
 }
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+}
+
+.chat-icon {
+  margin-right: 8px;
+  font-size: 1.3em;
+}
+
+.chat-content {
+  word-wrap: break-word;
+}
+
+/* Animación de espera */
+.typing .chat-content::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #004080;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 0; }
+  25%, 75% { opacity: 1; }
+}
+
