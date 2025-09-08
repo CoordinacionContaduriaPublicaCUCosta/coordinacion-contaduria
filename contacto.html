@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto - Coordinación</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Contacto</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Información de contacto</h2>
+      <p><strong>Correo:</strong> <a id="correo-link" href="mailto:coordinacion@ejemplo.com">coordinacion@ejemplo.com</a></p>
+      <p><strong>Teléfono:</strong> <a id="tel-link" href="tel:+5213220000000">+52 1 322 000 0000</a></p>
+      <p><strong>WhatsApp:</strong> <a id="wa-link" href="#" target="_blank">Enviar WhatsApp</a></p>
+      <p class="muted">Reemplaza los datos en <code>data.json</code> por los reales.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contacto vía formulario (envía por correo)</h2>
+      <form id="contact-form">
+        <label>Nombre
+          <input required type="text" id="name" />
+        </label>
+        <label>Correo
+          <input required type="email" id="email" />
+        </label>
+        <label>Mensaje
+          <textarea required id="message"></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+      <p id="form-result"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Aplicación gratuita</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "horario": {
+    "dias": "Lunes a Viernes",
+    "horas": "09:00 - 14:00"
+  },
+  "tramites": [
+    {"titulo":"Constancia de materias","descripcion":"Solicitud y emisión de constancia."},
+    {"titulo":"Aprobación de prácticas","descripcion":"Trámite de autorización para prácticas contables."},
+    {"titulo":"Baja de estudiantes","descripcion":"Proceso y requisitos para dar de baja."}
+  ],
+  "reglamentos": [
+    "Reglamento interno de la coordinación (Artículo 1 ...)",
+    "Normas de atención al público y conducta",
+    "Procedimiento para recepción de documentos"
+  ],
+  "faq": [
+    {"pregunta":"¿Dónde puedo tramitar una constancia?","respuesta":"En la sección de trámites está la información; acude en horario de atención."},
+    {"pregunta":"¿Puedo enviar documentos por correo?","respuesta":"Sí, envía un correo con los archivos escaneados adjuntos."}
+  ],
+  "contacto": {
+    "email":"coordinacion@ejemplo.com",
+    "phone":"+5213220000000",
+    "whatsapp":"5213220000000"
+  }
+}
