@@ -12,6 +12,18 @@
     {
       "titulo": "Toma de protesta",
       "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    },
+        {
+      "pregunta": "¿Ya te diste de alta en el IMSS?",
+      "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/AFILIATE_AL_IMSS_2023.pdf'</a>"
+    },
+    {
+      "pregunta": "¿Necesitas tramitar alguna constancia?",
+      "respuesta": "Si necesitas tramitar una constancia, puedes descargar el instructivo aquí: <a href='docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf'</a>"
+    },
+    {
+      "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, que debes de hacer?",
+      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. Puedes descargar las instrucciones aquí: <a href='docs/Denuncia_ante_la_fiscalia.pdf'</a>"
     }
   ],
   "reglamentos": [
@@ -30,18 +42,6 @@
     {
       "pregunta": "¿Cuál es el horario de atención?",
       "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
-    },
-    {
-      "pregunta": "¿Ya te diste de alta en el IMSS?",
-      "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/AFILIATE_AL_IMSS_2023.pdf'</a>"
-    },
-    {
-      "pregunta": "¿Necesitas tramitar alguna constancia?",
-      "respuesta": "Si necesitas tramitar una constancia, puedes descargar el instructivo aquí: <a href='docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf'</a>"
-    },
-    {
-      "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, que debes de hacer?",
-      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. Puedes descargar las instrucciones aquí: <a href='docs/Denuncia_ante_la_fiscalia.pdf'</a>"
     }
 
   ],
