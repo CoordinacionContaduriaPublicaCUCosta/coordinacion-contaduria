@@ -210,3 +210,56 @@ footer.footer {
 .btn-link:hover {
   background-color: #005fa3;
 }
+
+/* Hero con imagen a la izquierda */
+.hero-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+.hero-img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  color: #004080;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.hero-text p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Responsivo: en pantallas pequeñas la imagen va arriba */
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.4em;
+  }
+}
