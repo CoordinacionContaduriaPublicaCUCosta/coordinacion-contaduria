@@ -64,15 +64,28 @@ function appendMessage(sender, message) {
   const div = document.createElement('div');
   div.classList.add('chat-message', sender);
 
-  // Si la respuesta contiene un link a PDF, lo convertimos en botón
-  if (message.includes('docs/AFILIATE_AL_IMSS_2023.pdf')) {
-    const btn = document.createElement('a');
-    btn.href = 'docs/AFILIATE_AL_IMSS_2023.pdf';
-    btn.target = '_blank';
-    btn.textContent = '📄 Descargar PDF IMSS 2023';
-    btn.classList.add('pdf-btn');
-    div.textContent = message.split('<a')[0]; // mantiene el texto antes del link
-    div.appendChild(btn);
+  // Detectar enlaces PDF
+  if (message.includes('docs/')) {
+    const regex = /href=['"]([^'"]+)['"]/g;
+    let match;
+    let lastIndex = 0;
+    while ((match = regex.exec(message)) !== null) {
+      // Texto antes del link
+      const text = message.substring(lastIndex, match.index);
+      div.innerHTML += text;
+
+      // Crear botón
+      const btn = document.createElement('a');
+      btn.href = match[1];
+      btn.target = '_blank';
+      btn.textContent = '📄 Descargar PDF';
+      btn.classList.add('pdf-btn');
+      div.appendChild(btn);
+
+      lastIndex = regex.lastIndex;
+    }
+    // Agregar texto restante
+    div.innerHTML += message.substring(lastIndex);
   } else {
     div.innerHTML = message;
   }

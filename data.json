@@ -31,10 +31,10 @@
       "pregunta": "¿Cuál es el horario de atención?",
       "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
     },
-{
-  "pregunta": "¿Ya te diste de alta en el IMSS?",
-  "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/AFILIATE_AL_IMSS_2023.pdf' target='_blank'>Descargar PDF</a>"
-}
+    {
+      "pregunta": "¿Ya te diste de alta en el IMSS?",
+      "respuesta": "Recuerda que es un derecho y que es obligatorio que lo tengas vigente. Puedes descargar el instructivo en PDF aquí: <a href='docs/AFILIATE_AL_IMSS_2023.pdf' target='_blank'>Descargar PDF</a>"
+    }
 
   ],
   "contacto": {
