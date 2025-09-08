@@ -264,3 +264,68 @@ footer.footer {
   }
 }
 
+
+
+/* Botón modo noche/día */
+#toggle-theme {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  margin-left: 15px;
+  background-color: #007acc;
+  color: white;
+  transition: 0.3s;
+}
+
+#toggle-theme:hover {
+  background-color: #005fa3;
+}
+
+/* Modo claro (por defecto) */
+body.light-mode {
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+body.light-mode .topbar,
+body.light-mode footer {
+  background-color: #004080;
+  color: white;
+}
+
+body.light-mode .card {
+  background: white;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .topbar,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode a,
+body.dark-mode a:visited {
+  color: #80b3ff;
+}
+
+body.dark-mode .hero-card {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .chat-box {
+  background-color: #2a2a2a;
+}
+

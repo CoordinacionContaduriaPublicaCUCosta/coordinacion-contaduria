@@ -16,8 +16,8 @@
       <a href="contacto.html">Contacto</a>
       <a href="chat.html">Chat</a>
     </nav>
+      <button id="toggle-theme">🌙 Modo Noche</button>
   </header>
-
   <main class="container">
 
     <!-- Hero con imagen a la izquierda -->
@@ -62,6 +62,95 @@
   </footer>
 
   <script src="script.js"></script>
+
+
+  <script>
+    // === Modo Día/Noche ===
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    if(localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️ Modo Día';
+    } else {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if(body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        toggleBtn.textContent = '🌙 Modo Noche';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️ Modo Día';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // === Script loadData() ===
+    async function loadData() {
+      try {
+        const resp = await fetch('data.json');
+        const data = await resp.json();
+
+        // Horario
+        const horarioEl = document.getElementById('horario-content');
+        horarioEl.innerHTML = '';
+        for (let dia in data.horario) {
+          const li = document.createElement('li');
+          li.textContent = `${capitalize(dia)}: ${data.horario[dia]}`;
+          horarioEl.appendChild(li);
+        }
+
+        // Trámites
+        const tramitesEl = document.getElementById('tramites-content');
+        tramitesEl.innerHTML = '';
+        data.tramites.forEach(t => {
+          const div = document.createElement('div');
+          div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
+          div.classList.add('item-card');
+          tramitesEl.appendChild(div);
+        });
+
+        // Reglamentos
+        const reglamentosEl = document.getElementById('reglamentos-content');
+        reglamentosEl.innerHTML = '';
+        data.reglamentos.forEach(r => {
+          const p = document.createElement('p');
+          p.textContent = r;
+          reglamentosEl.appendChild(p);
+        });
+
+        // FAQ
+        const faqEl = document.getElementById('faq-content');
+        faqEl.innerHTML = '';
+        data.faq.forEach(f => {
+          const div = document.createElement('div');
+          div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
+          div.classList.add('item-card');
+          faqEl.appendChild(div);
+        });
+
+        // Contacto (opcional)
+        if(document.getElementById('correo-display')) document.getElementById('correo-display').textContent = data.contacto.email;
+        if(document.getElementById('telefono-display')) document.getElementById('telefono-display').textContent = data.contacto.phone;
+        if(document.getElementById('whatsapp-display')) document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
+
+      } catch (err) {
+        console.error('Error al cargar data.json:', err);
+      }
+    }
+
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    window.addEventListener('DOMContentLoaded', loadData);
+  </script>
+
 </body>
 </html>
 

@@ -27,5 +27,33 @@
   </main>
 
   <script src="chat.js"></script>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-theme');
+  const body = document.body;
+
+  // Inicializa el modo según localStorage
+  if(localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️ Modo Día';
+  } else {
+    body.classList.add('light-mode');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if(body.classList.contains('dark-mode')) {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      toggleBtn.textContent = '🌙 Modo Noche';
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️ Modo Día';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
+
 </body>
 </html>
