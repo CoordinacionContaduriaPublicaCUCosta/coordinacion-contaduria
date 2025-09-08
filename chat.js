@@ -17,7 +17,7 @@ async function loadFAQ() {
       btn.classList.add('faq-btn');
       btn.onclick = () => {
         appendMessage('user', f.pregunta);
-        appendMessage('bot', f.respuesta);
+        appendMessage('bot', f.respuesta, f.pdf);
       };
       buttonsDiv.appendChild(btn);
     });
@@ -27,11 +27,24 @@ async function loadFAQ() {
   }
 }
 
-function appendMessage(sender, message) {
+// appendMessage ahora acepta PDF opcional
+function appendMessage(sender, message, pdf) {
   const chatBox = document.getElementById('chat-box');
   const div = document.createElement('div');
   div.classList.add('chat-message', sender);
+
   div.textContent = message;
+
+  if(pdf){
+    const pdfBtn = document.createElement('a');
+    pdfBtn.href = pdf;
+    pdfBtn.target = '_blank';
+    pdfBtn.textContent = '📄 Descargar PDF';
+    pdfBtn.classList.add('pdf-btn');
+    div.appendChild(document.createElement('br'));
+    div.appendChild(pdfBtn);
+  }
+
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
@@ -45,55 +58,19 @@ function getAnswer(userMessage) {
     for(let dia in horarioData){
       horarioText += `${capitalize(dia)}: ${horarioData[dia]}\n`;
     }
-    return horarioText;
+    return { respuesta: horarioText };
   }
 
   // Buscar en FAQ
   for(let f of faqData){
     const question = f.pregunta.toLowerCase();
     if(msg.includes(question) || question.includes(msg)){
-      return f.respuesta;
+      return f; // incluye respuesta y PDF si existe
     }
   }
 
-  return "Lo siento, no tengo la respuesta a esa pregunta. Intenta con otra o revisa la sección de FAQ.";
+  return { respuesta: "Lo siento, no tengo la respuesta a esa pregunta. Intenta con otra o revisa la sección de FAQ." };
 }
-
-function appendMessage(sender, message) {
-  const chatBox = document.getElementById('chat-box');
-  const div = document.createElement('div');
-  div.classList.add('chat-message', sender);
-
-  // Detectar enlaces PDF
-  if (message.includes('docs/')) {
-    const regex = /href=['"]([^'"]+)['"]/g;
-    let match;
-    let lastIndex = 0;
-    while ((match = regex.exec(message)) !== null) {
-      // Texto antes del link
-      const text = message.substring(lastIndex, match.index);
-      div.innerHTML += text;
-
-      // Crear botón
-      const btn = document.createElement('a');
-      btn.href = match[1];
-      btn.target = '_blank';
-      btn.textContent = '📄 Descargar PDF';
-      btn.classList.add('pdf-btn');
-      div.appendChild(btn);
-
-      lastIndex = regex.lastIndex;
-    }
-    // Agregar texto restante
-    div.innerHTML += message.substring(lastIndex);
-  } else {
-    div.innerHTML = message;
-  }
-
-  chatBox.appendChild(div);
-  chatBox.scrollTop = chatBox.scrollHeight;
-}
-
 
 function handleSend() {
   const input = document.getElementById('user-input');
@@ -101,8 +78,10 @@ function handleSend() {
   if(message === '') return;
 
   appendMessage('user', message);
-  const answer = getAnswer(message);
-  setTimeout(() => appendMessage('bot', answer), 500);
+  let answer = getAnswer(message);
+
+  setTimeout(() => appendMessage('bot', answer.respuesta, answer.pdf), 500);
+
   input.value = '';
   input.focus();
 }
