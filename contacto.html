@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contacto - Coordinación</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
   <header class="topbar">
@@ -19,36 +17,46 @@
   </header>
 
   <main class="container">
-    <!-- Hero con imagen -->
-    <section class="hero-card">
-      <img src="images/Foto_Contaduria.jpeg" alt="Coordinación Contaduría" class="hero-img">
-      <div class="hero-text">
-        <h2>Estamos para ayudarte</h2>
-        <p>Puedes comunicarte con nosotros a través de los siguientes medios. Nuestro equipo de coordinación y asistentes estarán atentos a tus dudas.</p>
-      </div>
-    </section>
+<section class="card">
+  <h2>Información de contacto</h2>
+  <!-- Imagen de la coordinación -->
+  <img src="images/Informacion_de_contacto.jpeg" alt="Información de la Coordinación" class="contact-img" />
+  
+  <p><strong>Correos:</strong></p>
+  <ul>
+    <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a></li>
+    <li><a href="mailto:aida@cuc.udg.mx">aida@cuc.udg.mx</a></li>
+  </ul>
+  <p><strong>Teléfonos:</strong></p>
+  <ul>
+    <li>Asistente de Coordinación: <a href="tel:+5213222262223">+52 1 322 226 2223</a></li>
+    <li>Mtra. Iris: <a href="tel:+5213222262318">+52 1 322 226 2318 </a></li>
+  </ul>  <p><strong>WhatsApp:</strong> <a href="https://wa.me/5213220000000" target="_blank">Enviar WhatsApp</a></p>
+</section>
 
-    <!-- Información de contacto -->
-    <section class="card">
-      <h2>Información de contacto</h2>
-      <p><i class="fas fa-envelope"></i> <strong>Correos:</strong></p>
-      <ul>
-        <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a> (Mtra. Iris)</li>
-        <li><a href="mailto:aida@cuc.udg.mx">aida@cuc.udg.mx</a> (Asistente de Coordinación)</li>
-      </ul>
-      <p><i class="fas fa-phone"></i> <strong>Teléfonos:</strong></p>
-      <ul>
-        <li><a href="tel:+523221234567">+52 322 123 4567</a> (Asistente)</li>
-        <li><a href="tel:+523229876543">+52 322 987 6543</a> (Mtra. Iris)</li>
-      </ul>
-      <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 
-        <a href="https://wa.me/5213220000000" target="_blank" class="btn-link">Enviar WhatsApp</a>
-      </p>
-    </section>
   </main>
 
   <footer class="footer">
-    Pagina gratuita · Coordinación de Contaduría Pública
+    <small>Aplicación gratuita</small>
   </footer>
+
+  <script>
+    // Formulario gratuito usando mailto
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Mensaje desde la Coordinación: ${name}`);
+      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
+
+      // Abrir cliente de correo
+      window.location.href = `mailto:coordinacion@ejemplo.com?subject=${subject}&body=${body}`;
+      
+      document.getElementById('form-result').textContent = "Se abrió tu cliente de correo para enviar el mensaje.";
+      document.getElementById('contact-form').reset();
+    });
+  </script>
 </body>
 </html>

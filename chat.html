@@ -1,45 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chat - Coordinación</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Coordinación</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <h1>Chat de asistencia</h1>
+    <h1>Chat de Coordinación de Contaduría</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="contacto.html">Contacto</a>
-      <a href="chat.html">Chat</a>
     </nav>
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>Asistente virtual</h2>
-      <p>Haz clic en las preguntas frecuentes o escribe tu duda para recibir ayuda inmediata.</p>
+    <div id="chat-box" class="chat-box"></div>
 
-      <!-- Botones FAQ -->
-      <div class="chat-buttons" id="faq-buttons"></div>
+    <div class="chat-buttons" id="chat-buttons"></div>
 
-      <!-- Chat -->
-      <div class="chat-box" id="chat-box"></div>
-
-      <!-- Input -->
-      <div class="chat-input">
-        <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-        <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
-      </div>
-    </section>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí...">
+      <button id="send-btn">Enviar</button>
+    </div>
   </main>
-
-  <footer class="footer">
-    Pagina gratuita · Coordinación de Contaduría Pública
-  </footer>
 
   <script src="chat.js"></script>
 </body>
