@@ -165,11 +165,8 @@ footer.footer {
 }
 
 .contact-img {
-  width: 50%;      /* ocupa todo el ancho del card */
-  max-width: 200px; /* tamaño máximo */
-  height: auto;     /* mantiene proporción */
-  display: block;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
+
