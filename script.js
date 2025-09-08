@@ -1,3 +1,4 @@
+
 async function loadData() {
   try {
     const resp = await fetch('data.json');
@@ -56,3 +57,4 @@ function capitalize(str) {
 }
 
 window.addEventListener('DOMContentLoaded', loadData);
+
