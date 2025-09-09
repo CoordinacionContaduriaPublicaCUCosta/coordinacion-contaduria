@@ -15,7 +15,7 @@
     }
   ],
   "reglamentos": [
-    
+
     "Reglamento General de Evaluación y Promoción de Alumnos",
     "Artículo 53. Los alumnos podrán justificar su falta de asistencia a clases por alguna de las siguientes causas:",
     "I. Por enfermedad (con comprobante de haber acudido al IMSS);",
@@ -46,6 +46,10 @@
       "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, qué debes hacer?",
       "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación.",
       "pdf": "docs/Denuncia_ante_la_fiscalia.pdf"
+    },
+    {
+      "pregunta": "¿Qué hago si no estoy de acuerdo en la evaluación de una materia?",
+      "respuesta": "El alumno podrá solicitar por escrito y de manera justificada, la revisión del resultado de su evaluación o de un examen al Jefe del Departamento que tenga a su cargo la materia de que se trata cuando considere que se ha cometido un error en su calificación.\n\nDicha revisión deberá solicitarla dentro de los tres días hábiles siguientes a la fecha en que se hayan publicado o notificado los resultados de la evaluación o examen.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículo 49)"
     }
   ],
   "contacto": {
