@@ -20,6 +20,9 @@ async function loadFAQ() {
       buttonsDiv.appendChild(btn);
     });
 
+    // Mensaje de bienvenida del bot
+    appendMessage('bot', "¡Hola! 🤖 Soy tu asistente de la Coordinación de Contaduría. Puedes escribirme tus dudas o usar los botones rápidos para consultar información.");
+
   } catch(err) {
     console.error('Error al cargar FAQ:', err);
   }
