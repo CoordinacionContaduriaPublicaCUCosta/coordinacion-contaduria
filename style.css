@@ -299,7 +299,9 @@ body.light-mode .card {
   background: white;
 }
 
-/* Modo oscuro */
+/* ======================
+   MODO OSCURO
+   ====================== */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -311,9 +313,16 @@ body.dark-mode footer {
   color: #fff;
 }
 
-body.dark-mode .card {
+body.dark-mode .card,
+body.dark-mode .hero-card {
   background-color: #1e1e1e;
   color: #e0e0e0;
+}
+
+body.dark-mode .item-card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* sombra más visible */
 }
 
 body.dark-mode a,
@@ -321,30 +330,21 @@ body.dark-mode a:visited {
   color: #80b3ff;
 }
 
-body.dark-mode .hero-card {
-  background-color: #1e1e1e;
+body.dark-mode .faq-btn,
+body.dark-mode .pdf-btn,
+body.dark-mode .btn-link {
+  background-color: #005fa3;
+  color: white;
+}
+
+body.dark-mode .faq-btn:hover,
+body.dark-mode .pdf-btn:hover,
+body.dark-mode .btn-link:hover {
+  background-color: #003f66;
 }
 
 body.dark-mode .chat-box {
   background-color: #2a2a2a;
-}
-
-/* Modo oscuro adicional */
-body.dark-mode .item-card {
-  background-color: #2a2a2a;  /* Gris oscuro */
-  color: #e0e0e0;
-}
-
-body.dark-mode .hero-card {
-  background-color: #1e1e1e;  /* Coincide con card principal */
-  color: #e0e0e0;
-}
-
-body.dark-mode .faq-btn,
-body.dark-mode .pdf-btn,
-body.dark-mode .btn-link {
-  background-color: #005fa3; /* Ajustar botones a modo oscuro */
-  color: white;
 }
 
 body.dark-mode .chat-message.bot {
@@ -357,4 +357,10 @@ body.dark-mode .chat-input input {
   color: #e0e0e0;
   border: 1px solid #555;
 }
+
+body.dark-mode .hero-text h2,
+body.dark-mode .hero-text p {
+  color: #e0e0e0;
+}
+
 
