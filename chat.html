@@ -29,32 +29,56 @@
 
   <script src="chat.js"></script>
 
-<script>
-  const toggleBtn = document.getElementById('toggle-theme');
-  const body = document.body;
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
 
-  // Inicializa el modo según localStorage
-  if(localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    toggleBtn.textContent = '☀️ Modo Día';
-  } else {
-    body.classList.add('light-mode');
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    if(body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-      body.classList.add('light-mode');
-      toggleBtn.textContent = '🌙 Modo Noche';
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.classList.remove('light-mode');
+    // Inicializa el modo según localStorage
+    if(localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark-mode');
       toggleBtn.textContent = '☀️ Modo Día';
-      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.add('light-mode');
     }
-  });
-</script>
 
+    toggleBtn.addEventListener('click', () => {
+      if(body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        toggleBtn.textContent = '🌙 Modo Noche';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️ Modo Día';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // Mensaje de bienvenida al cargar la página
+    window.addEventListener('DOMContentLoaded', () => {
+      // Espera a que chat.js cargue FAQ y horario
+      setTimeout(() => {
+        const chatBox = document.getElementById('chat-box');
+        if(chatBox && chatBox.children.length === 0) {
+          const welcomeDiv = document.createElement('div');
+          welcomeDiv.classList.add('chat-message', 'bot');
+          
+          const icon = document.createElement('span');
+          icon.classList.add('chat-icon');
+          icon.textContent = '🤖';
+          welcomeDiv.appendChild(icon);
+          
+          const content = document.createElement('span');
+          content.classList.add('chat-content');
+          content.textContent = "¡Hola! 👋 Soy tu asistente de la Coordinación de Contaduría. Puedo ayudarte a resolver dudas sobre trámites, reglamentos y más. Escribe tu pregunta o usa los botones rápidos.";
+          welcomeDiv.appendChild(content);
+
+          chatBox.appendChild(welcomeDiv);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }
+      }, 500); // Espera medio segundo a que cargue chat.js
+    });
+  </script>
 </body>
 </html>
