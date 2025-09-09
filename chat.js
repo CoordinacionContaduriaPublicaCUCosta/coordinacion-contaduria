@@ -20,8 +20,12 @@ async function loadFAQ() {
       buttonsDiv.appendChild(btn);
     });
 
-    // Mensaje de bienvenida del bot
-    appendMessage('bot', "¡Hola! 🤖 Soy tu asistente de la Coordinación de Contaduría. Puedes escribirme tus dudas o usar los botones rápidos para consultar información.");
+    // Mensaje de bienvenida con animación "Escribiendo..."
+    const typingDiv = appendMessage('bot', "Escribiendo...", null, true);
+    setTimeout(() => {
+      typingDiv.remove();
+      appendMessage('bot', "¡Hola! 🤖 Soy tu asistente de la Coordinación de Contaduría. Puedes escribirme tus dudas o usar los botones rápidos para consultar información.");
+    }, 2000);
 
   } catch(err) {
     console.error('Error al cargar FAQ:', err);
@@ -60,6 +64,8 @@ function sendMessage(message) {
 // appendMessage acepta un PDF opcional y flag de espera
 function appendMessage(sender, message, pdf = null, isTyping = false) {
   const chatBox = document.getElementById('chat-box');
+  if(!chatBox) return; // Protección si no existe
+
   const div = document.createElement('div');
   div.classList.add('chat-message', sender);
 
