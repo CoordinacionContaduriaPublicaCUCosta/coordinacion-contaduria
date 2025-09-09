@@ -124,4 +124,18 @@ document.getElementById('user-input').addEventListener('keypress', function(e){
   if(e.key === 'Enter') sendMessage(document.getElementById('user-input').value);
 });
 
-window.addEventListener('DOMContentLoaded', loadFAQ);
+// Inicialización al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+  loadFAQ(); // cargar FAQ y botones rápidos
+
+  // Mensaje de bienvenida automático
+  const welcomeMessage = "¡Hola! 👋 Soy el asistente de la Coordinación de Contaduría. Puedo ayudarte a resolver tus dudas sobre trámites, reglamentos y más. Escribe tu pregunta o usa los botones rápidos.";
+
+  // Simular animación de "escribiendo..."
+  const typingDiv = appendMessage('bot', "Escribiendo...", null, true);
+
+  setTimeout(() => {
+    typingDiv.remove(); // quitar animación de espera
+    appendMessage('bot', welcomeMessage);
+  }, 1500);
+});
