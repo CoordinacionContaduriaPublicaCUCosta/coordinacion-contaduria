@@ -1,4 +1,3 @@
-
 async function loadData() {
   try {
     const resp = await fetch('data.json');
@@ -18,8 +17,20 @@ async function loadData() {
     tramitesEl.innerHTML = '';
     data.tramites.forEach(t => {
       const div = document.createElement('div');
-      div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
       div.classList.add('item-card');
+      div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
+
+      // Si hay enlace, crear botón
+      if(t.enlace){
+        const btn = document.createElement('a');
+        btn.href = t.enlace;
+        btn.target = "_blank";
+        btn.textContent = "🔗 Ver más";
+        btn.classList.add('btn-link');
+        div.appendChild(document.createElement('br'));
+        div.appendChild(btn);
+      }
+
       tramitesEl.appendChild(div);
     });
 
@@ -37,14 +48,26 @@ async function loadData() {
     faqEl.innerHTML = '';
     data.faq.forEach(f => {
       const div = document.createElement('div');
-      div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
       div.classList.add('item-card');
+      div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
+
+      // Si hay PDF, agregar botón
+      if(f.pdf){
+        const pdfBtn = document.createElement('a');
+        pdfBtn.href = f.pdf;
+        pdfBtn.target = "_blank";
+        pdfBtn.textContent = '📄 Descargar PDF';
+        pdfBtn.classList.add('pdf-btn');
+        div.appendChild(document.createElement('br'));
+        div.appendChild(pdfBtn);
+      }
+
       faqEl.appendChild(div);
     });
 
     // Contacto
-    document.getElementById('correo-display').textContent = data.contacto.email;
-    document.getElementById('telefono-display').textContent = data.contacto.phone;
+    document.getElementById('correo-display').textContent = data.contacto.email.join(", ");
+    document.getElementById('telefono-display').textContent = data.contacto.phone.join(", ");
     document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
 
   } catch (err) {
@@ -57,4 +80,3 @@ function capitalize(str) {
 }
 
 window.addEventListener('DOMContentLoaded', loadData);
-
