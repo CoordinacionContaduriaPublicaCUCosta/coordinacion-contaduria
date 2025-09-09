@@ -329,3 +329,32 @@ body.dark-mode .chat-box {
   background-color: #2a2a2a;
 }
 
+/* Modo oscuro adicional */
+body.dark-mode .item-card {
+  background-color: #2a2a2a;  /* Gris oscuro */
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero-card {
+  background-color: #1e1e1e;  /* Coincide con card principal */
+  color: #e0e0e0;
+}
+
+body.dark-mode .faq-btn,
+body.dark-mode .pdf-btn,
+body.dark-mode .btn-link {
+  background-color: #005fa3; /* Ajustar botones a modo oscuro */
+  color: white;
+}
+
+body.dark-mode .chat-message.bot {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .chat-input input {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
