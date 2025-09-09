@@ -12,6 +12,11 @@
     {
       "titulo": "Toma de protesta",
       "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    },
+    {
+      "titulo": "Solicitud de Licencia",
+      "descripcion": "Para solicitar la licencia, el alumno o alumna deberá entregar los documentos en original en las ventanillas de atención a Alumnos:\n- Solicitud de Licencia.\n- Ficha y recibo de pago bancario en original del trámite administrativo.\n- Constancia Médica (según la situación).\n- No tener adeudos en la Orden de Pago.\n- No tener materias reprobadas al momento de solicitarla.",
+      "enlace": "http://www.cuc.udg.mx/es/solicitud-de-licencia"
     }
   ],
   "reglamentos": [
