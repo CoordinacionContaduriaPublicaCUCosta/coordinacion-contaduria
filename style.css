@@ -363,4 +363,19 @@ body.dark-mode .hero-text p {
   color: #e0e0e0;
 }
 
+.welcome-chat {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .welcome-chat {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+
 
