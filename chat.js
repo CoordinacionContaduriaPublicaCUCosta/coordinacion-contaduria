@@ -180,6 +180,11 @@ if (/dónde está|ubicación|coordinación|oficina|donde esta la coordinacion|co
     return { respuesta: "Puedes contactar a tu Coordinador de Carrera directamente en la oficina de Coordinación Académica o a través del correo institucional del Centro Universitario de la Costa." };
   }
 
+  // Creador
+  if (/creador|Creador|Quien te creo|quien te creo|Quien es tu dios|quien es tu dios/.test(msg)) {
+    return { respuesta: "Hola Mi nombre es ContaBot, Mi creador y padre es Jaime Jair (tambien conocido como RIAJ); el es mi creador Original, si bien mucho podran actualizar o modificar mi contenido el es mi unico creador, su ig es: jjair_santana por si gustan seguir, el es mi padre, y espero seguir evolucionando." };
+  }
+
   // 🔍 Buscar en FAQ (exacto o parcial)
   for (let f of faqData) {
     const question = f.pregunta.toLowerCase();
