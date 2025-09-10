@@ -110,10 +110,23 @@
         tramitesEl.innerHTML = '';
         data.tramites.forEach(t => {
           const div = document.createElement('div');
-          div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
           div.classList.add('item-card');
+          div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
+
+          // Si hay enlace, crear botón
+          if (t.enlace) {
+            const btn = document.createElement('a');
+            btn.href = t.enlace;
+            btn.target = "_blank";
+            btn.textContent = "🔗 Ver más";
+            btn.classList.add('btn-link');
+            div.appendChild(document.createElement('br'));
+            div.appendChild(btn);
+          }
+
           tramitesEl.appendChild(div);
         });
+
 
         // Reglamentos
         const reglamentosEl = document.getElementById('reglamentos-content');
