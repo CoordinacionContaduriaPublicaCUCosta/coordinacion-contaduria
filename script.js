@@ -74,11 +74,6 @@ async function loadData() {
     document.getElementById('telefono-display').textContent = data.contacto.phone.join(", ");
     document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
 
-    // Facebook
-    if (data.contacto.facebook && document.getElementById('facebook-link')) {
-      document.getElementById('facebook-link').setAttribute("href", data.contacto.facebook);
-    }
-
   } catch (err) {
     console.error('Error al cargar data.json:', err);
   }
