@@ -79,5 +79,11 @@
     "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],
     "phone": ["Mtra. Iris +52 322 226 2223", "Asistente de Coordinacion +52 322 226 2318"],
     "whatsapp": "523220000000"
+  },
+
+  "ubicacion": {
+    "direccion": "Coordinación Académica, Centro Universitario de la Costa, Av. Universidad 203, Ixtapa, Puerto Vallarta, Jal.",
+    "mapa": "https://www.google.com/maps/place/20%C2%B042'16.7%22N+105%C2%B013'24.1%22W/@20.7046341,-105.2245595,19z/data=!4m7!1m2!2m1!1sCentro+Universitario+de+la+Costa+PUV!3m3!8m2!3d20.704637!4d-105.223358?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D"
   }
+  
 }

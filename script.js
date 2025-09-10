@@ -12,6 +12,10 @@ async function loadData() {
       horarioEl.appendChild(li);
     }
 
+    // Ubicación
+    document.getElementById('direccion-display').textContent = data.ubicacion.direccion;
+    document.getElementById('mapa-link').href = data.ubicacion.mapa;
+
     // Trámites
     const tramitesEl = document.getElementById('tramites-content');
     tramitesEl.innerHTML = '';

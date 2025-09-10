@@ -141,10 +141,10 @@ function getAnswer(userMessage) {
     return { respuesta: "¡Gracias por usar el chat! 😊 Vuelve cuando quieras, siempre estoy aquí para ayudarte." };
   }
 
-  // 📍 Ubicación
-  if (/dónde está|ubicación|coordinación|oficina|ubicacion|dond se encuentra la coordinacion|donde esta la oficina de coordinacion/.test(msg)) {
-    return { respuesta: "La Coordinación Académica está dentro del Centro Universitario de la Costa. Puedes acudir directamente en horario de atención para más apoyo." };
-  }
+// 📍 Ubicación
+if (/dónde está|ubicación|coordinación|oficina|donde esta la coordinacion|como llegar a la oficina/.test(msg)) {
+  return { respuesta: "La Coordinación Académica está en: Av. Universidad 203, Ixtapa, Puerto Vallarta, Jal. 📍\nAquí tienes el mapa: https://www.google.com/maps/place/20%C2%B042'16.7%22N+105%C2%B013'24.1%22W/@20.7046341,-105.2245595,19z/data=!4m7!1m2!2m1!1sCentro+Universitario+de+la+Costa+PUV!3m3!8m2!3d20.704637!4d-105.223358?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D" };
+}
 
   // 🕐 Horario de atención
   if (/horario|atención|a qué hora|cuándo atienden/.test(msg)) {
