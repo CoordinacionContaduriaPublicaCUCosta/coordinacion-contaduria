@@ -141,11 +141,6 @@ function getAnswer(userMessage) {
     return { respuesta: "¡Gracias por usar el chat! 😊 Vuelve cuando quieras, siempre estoy aquí para ayudarte." };
   }
 
-  // ❓ Dudas / No entendí
-  if (/no entiendo|explícame|ayuda|qué hago|dime/.test(msg)) {
-    return { respuesta: "Entiendo tu duda 🤔. Puedes preguntarme sobre: horarios, trámites, servicio social, prácticas profesionales, formación integral o reglamento." };
-  }
-
   // 📍 Ubicación
   if (/dónde está|ubicación|coordinación|oficina/.test(msg)) {
     return { respuesta: "La Coordinación Académica está dentro del Centro Universitario de la Costa. Puedes acudir directamente en horario de atención para más apoyo." };
