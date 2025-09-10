@@ -24,7 +24,7 @@ async function loadFAQ() {
     const typingDiv = appendMessage('bot', "Escribiendo...", null, true);
     setTimeout(() => {
       typingDiv.remove();
-      appendMessage('bot', "¡Hola! 🤖 Soy tu asistente de la Coordinación de Contaduría. Puedes escribirme tus dudas o usar los botones rápidos para consultar información.");
+      appendMessage('bot', "¡Hola! 🤖 Soy tu asistente de la Coordinación de Contaduría ContaBot. Puedes escribirme tus dudas o usar los botones rápidos para consultar información.");
     }, 2000);
 
   } catch(err) {
