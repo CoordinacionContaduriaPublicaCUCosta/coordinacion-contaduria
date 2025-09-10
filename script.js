@@ -74,8 +74,9 @@ async function loadData() {
     document.getElementById('telefono-display').textContent = data.contacto.phone.join(", ");
     document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
 
-        if (document.getElementById('facebook-link')) {
-      document.getElementById('facebook-link').href = data.contacto.facebook;
+    // Facebook
+    if (data.contacto.facebook && document.getElementById('facebook-link')) {
+      document.getElementById('facebook-link').setAttribute("href", data.contacto.facebook);
     }
 
   } catch (err) {
