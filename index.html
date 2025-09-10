@@ -147,6 +147,17 @@
             div.appendChild(btn);
           }
 
+           // Si hay documento, crear botón de descarga
+          if(t.documento){
+            const docBtn = document.createElement('a');
+            docBtn.href = t.documento;
+            docBtn.download = "";
+            docBtn.textContent = "📄 Descargar formato";
+            docBtn.classList.add('btn-link');
+            div.appendChild(document.createElement('br'));
+            div.appendChild(docBtn);
+          }
+
           tramitesEl.appendChild(div);
         });
 
