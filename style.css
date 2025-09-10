@@ -378,4 +378,19 @@ body.dark-mode .welcome-chat {
 }
 
 
+.btn-tramite {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn-tramite:hover {
+  background-color: #005fa3;
+}
+
 

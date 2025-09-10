@@ -18,10 +18,10 @@ async function loadData() {
     data.tramites.forEach(t => {
       const div = document.createElement('div');
       div.classList.add('item-card');
-      div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
+      div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion.replace(/\n/g, "<br>")}`;
 
       // Si hay enlace, crear botón
-      if(t.enlace){
+      if (t.enlace) {
         const btn = document.createElement('a');
         btn.href = t.enlace;
         btn.target = "_blank";
@@ -49,10 +49,10 @@ async function loadData() {
     data.faq.forEach(f => {
       const div = document.createElement('div');
       div.classList.add('item-card');
-      div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
+      div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta.replace(/\n/g, "<br>")}`;
 
       // Si hay PDF, agregar botón
-      if(f.pdf){
+      if (f.pdf) {
         const pdfBtn = document.createElement('a');
         pdfBtn.href = f.pdf;
         pdfBtn.target = "_blank";
