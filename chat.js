@@ -132,42 +132,81 @@ function capitalize(str){
 function getAnswer(userMessage) {
   const msg = userMessage.toLowerCase();
 
-  // Saludos
-  if(/hola|buenas|qué tal|hey/.test(msg)){
-    return { respuesta: "¡Hola! 👋 Bienvenido al chat de la Coordinación. Pregunta lo que necesites sobre trámites, horarios, servicio social o reglamentos." };
+  // 👋 Saludos
+  if (/hola|buenas|qué tal|hey|holi/.test(msg)) {
+    return { respuesta: "¡Hola! 👋 Bienvenido al chat de la Coordinación Académica. Pregunta lo que necesites sobre trámites, servicio social, reglamentos o formación integral." };
   }
 
-  // Despedidas
-  if(/adiós|gracias|nos vemos|bye/.test(msg)){
-    return { respuesta: "¡Gracias por usar el chat! 😊 Recuerda que siempre puedes volver a preguntar cuando quieras." };
+  // 🙋 Despedidas
+  if (/adiós|gracias|nos vemos|bye|hasta luego/.test(msg)) {
+    return { respuesta: "¡Gracias por usar el chat! 😊 Vuelve cuando quieras, siempre estoy aquí para ayudarte." };
   }
 
-  // Preguntar por el servicio social
-  if(msg.includes("servicio social")){
-    return { respuesta: "Puedes iniciar tu servicio social al cumplir el 60% de tus créditos. Consulta más información en la sección Servicio Social del inicio." };
+  // ❓ Dudas / No entendí
+  if (/no entiendo|explícame|ayuda|qué hago|dime/.test(msg)) {
+    return { respuesta: "Entiendo tu duda 🤔. Puedes preguntarme sobre: horarios, trámites, servicio social, prácticas profesionales, formación integral o reglamento." };
   }
 
-  // Responder sobre horario
-  if(msg.includes('horario') || msg.includes('atención')){
+  // 📍 Ubicación
+  if (/dónde está|ubicación|coordinación|oficina/.test(msg)) {
+    return { respuesta: "La Coordinación Académica está dentro del Centro Universitario de la Costa. Puedes acudir directamente en horario de atención para más apoyo." };
+  }
+
+  // 🕐 Horario de atención
+  if (/horario|atención|a qué hora|cuándo atienden/.test(msg)) {
     let horarioText = "Nuestro horario de atención es:\n";
-    for(let dia in horarioData){
+    for (let dia in horarioData) {
       horarioText += `${capitalize(dia)}: ${horarioData[dia]}\n`;
     }
     return { respuesta: horarioText };
   }
 
-  // Buscar en FAQ
-  for(let f of faqData){
+  // 📚 Reprobadas
+  if (/repruebo|qué pasa si repruebo|perdí la materia|no pasé/.test(msg)) {
+    return { respuesta: "Si repruebas en ordinario y extraordinario, deberás repetir la materia en el siguiente ciclo donde se ofrezca. Si no logras acreditarla nuevamente, serás dado de baja. (Ver Artículo 33)." };
+  }
+
+  // 📖 Artículos 33 y 35
+  if (/artículo 33|artículo 35|me aplicaron el 33|me aplicaron el 35/.test(msg)) {
+    return { respuesta: "Si fuiste dado de baja por el artículo 33, puedes solicitar por escrito a la Comisión de Educación una nueva oportunidad antes del siguiente ciclo. Si no apruebas en esa oportunidad, se aplicará el artículo 35 y la baja será definitiva." };
+  }
+
+  // 🏅 Servicio Social
+  if (/servicio social|cómo hago servicio social|quiero hacer servicio social/.test(msg)) {
+    return { respuesta: "Puedes iniciar tu servicio social al cumplir el 60% de tus créditos. Debes acudir con tu coordinador y revisar las convocatorias vigentes en la Coordinación Académica." };
+  }
+
+  // 🎓 Prácticas Profesionales
+  if (/prácticas profesionales|cómo hago prácticas/.test(msg)) {
+    return { respuesta: "Las prácticas profesionales se realizan una vez que cumplas con los requisitos de tu plan de estudios. Acude con tu Coordinador para conocer las empresas y convenios disponibles." };
+  }
+
+  // 📄 Trámites
+  if (/trámite|qué necesito|documentos|requisitos/.test(msg)) {
+    return { respuesta: "Puedes realizar distintos trámites como constancias, revalidaciones, formación integral y más. Acude con tu Coordinador con la documentación correspondiente para iniciar el proceso." };
+  }
+
+  // 🎭 Formación Integral
+  if (/formación integral|créditos extracurriculares|actividades extracurriculares/.test(msg)) {
+    return { respuesta: "Debes acreditar 12 actividades extracurriculares (culturales, deportivas, talleres, etc.) para obtener 4 créditos. Solicita el reconocimiento con tu Coordinador entregando oficio y constancias." };
+  }
+
+  // 📨 Contacto
+  if (/correo|teléfono|contacto|coordinador/.test(msg)) {
+    return { respuesta: "Puedes contactar a tu Coordinador de Carrera directamente en la oficina de Coordinación Académica o a través del correo institucional del Centro Universitario de la Costa." };
+  }
+
+  // 🔍 Buscar en FAQ (exacto o parcial)
+  for (let f of faqData) {
     const question = f.pregunta.toLowerCase();
-    if(msg.includes(question) || question.includes(msg)){
+    if (msg.includes(question) || question.includes(msg)) {
       return f;
     }
   }
 
-  // Si no encontró nada
-  return { respuesta: "No entendí tu pregunta 🤔. Intenta con otra palabra o revisa las opciones de FAQ aquí abajo 👇" };
+  // 🛑 No encontró nada
+  return { respuesta: "No entendí tu pregunta 😅. Puedes intentar con otra palabra o revisar las opciones de FAQ aquí abajo 👇" };
 }
-
 
 
 
