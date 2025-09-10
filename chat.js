@@ -128,7 +128,6 @@ function capitalize(str){
 }
 
 
-
 function getAnswer(userMessage) {
   const msg = userMessage.toLowerCase();
 
