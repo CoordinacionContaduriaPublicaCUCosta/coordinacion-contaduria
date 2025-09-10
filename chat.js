@@ -127,6 +127,51 @@ function capitalize(str){
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+
+
+function getAnswer(userMessage) {
+  const msg = userMessage.toLowerCase();
+
+  // Saludos
+  if(/hola|buenas|qué tal|hey/.test(msg)){
+    return { respuesta: "¡Hola! 👋 Bienvenido al chat de la Coordinación. Pregunta lo que necesites sobre trámites, horarios, servicio social o reglamentos." };
+  }
+
+  // Despedidas
+  if(/adiós|gracias|nos vemos|bye/.test(msg)){
+    return { respuesta: "¡Gracias por usar el chat! 😊 Recuerda que siempre puedes volver a preguntar cuando quieras." };
+  }
+
+  // Preguntar por el servicio social
+  if(msg.includes("servicio social")){
+    return { respuesta: "Puedes iniciar tu servicio social al cumplir el 60% de tus créditos. Consulta más información en la sección Servicio Social del inicio." };
+  }
+
+  // Responder sobre horario
+  if(msg.includes('horario') || msg.includes('atención')){
+    let horarioText = "Nuestro horario de atención es:\n";
+    for(let dia in horarioData){
+      horarioText += `${capitalize(dia)}: ${horarioData[dia]}\n`;
+    }
+    return { respuesta: horarioText };
+  }
+
+  // Buscar en FAQ
+  for(let f of faqData){
+    const question = f.pregunta.toLowerCase();
+    if(msg.includes(question) || question.includes(msg)){
+      return f;
+    }
+  }
+
+  // Si no encontró nada
+  return { respuesta: "No entendí tu pregunta 🤔. Intenta con otra palabra o revisa las opciones de FAQ aquí abajo 👇" };
+}
+
+
+
+
+
 // Eventos de input
 document.getElementById('send-btn').addEventListener('click', () => sendMessage(document.getElementById('user-input').value));
 document.getElementById('user-input').addEventListener('keypress', function(e){
