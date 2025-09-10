@@ -49,17 +49,17 @@
     },
     {
       "pregunta": "¿Ya te diste de alta en el IMSS?",
-      "respuesta": "Recuerda que es un derecho y obligatorio tenerlo vigente.",
+      "respuesta": "Recuerda que es un derecho y obligatorio tenerlo vigente. (Para Desacargar el Documento debe usar  el Chat)",
       "pdf": "docs/AFILIATE_AL_IMSS_2023.pdf"
     },
     {
       "pregunta": "¿Necesitas tramitar alguna constancia?",
-      "respuesta": "Si necesitas tramitar una constancia, puedes consultar el instructivo.",
+      "respuesta": "Si necesitas tramitar una constancia, puedes consultar el instructivo. (Para Desacargar el Documento debe usar  el Chat)",
       "pdf": "docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf"
     },
     {
       "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, qué debes hacer?",
-      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación.",
+      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. (Para Desacargar el Documento debe usar  el Chat)",
       "pdf": "docs/Denuncia_ante_la_fiscalia.pdf"
     },
     {
@@ -77,8 +77,8 @@
   ],
   "contacto": {
     "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],
-    "phone": ["Mtra. Iris +52 322 226 2223", "Asistente de Coordinacion +52 322 226 2318"],
-    "whatsapp": "523220000000",
+    "phone": ["Coordinacion +52 322 226 2318"],
+    "whatsapp": "523223224961",
     "facebook": "https://www.facebook.com/LCOPCucosta"
   },
 
