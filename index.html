@@ -1,215 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coordinación de Contaduría Pública</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinación de Contaduría Pública</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <header class="topbar">
-    <h1><i class="fas fa-building"></i> Coordinación de Contaduría Pública</h1>
-    <nav>
-      <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-      <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
-      <a href="chat.html"><i class="fas fa-comments"></i> Chat</a>
-    </nav>
+    <header class="topbar">
+        <h1>Coordinación en Contaduría Pública</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+            <a href="chat.html"><i class="fas fa-comments"></i> Chat</a>
+        </nav>
 
-      <button id="toggle-theme">🌙 Modo Noche</button>
-  </header>
-  <main class="container">
+        <button id="toggle-theme">🌙 Modo Noche</button>
+    </header>
+    <main class="container">
 
-    <!-- Hero con imagen a la izquierda -->
-    <section class="hero-card">
-      <img src="images/Foto_Contaduria.jpeg" alt="Coordinación Contaduría" class="hero-img">
-      <div class="hero-text">
-        <h2><i class="fas fa-user-tie"></i> Bienvenido a la Coordinación de Contaduría Pública</h2>
-        <p>Encuentra información importante sobre trámites, reglamentos y documentos, y resuelve tus dudas con nuestro chatbot interactivo. ¡Todo de forma gratuita!</p>
-      </div>
-    </section>
+        <!-- Hero con imagen a la izquierda -->
+        <section class="hero-card">
+            <img src="images/conta.jpg" alt="Coordinación Contaduría" class="hero-img">
+            <div class="hero-text">
+                <h2><i class="fas fa-user-tie"></i> Bienvenido a la Coordinación de Contaduría Pública</h2>
+                <p>Encuentra información importante sobre trámites, reglamentos y documentos, y resuelve tus dudas con nuestro chatbot interactivo. ¡Todo de forma gratuita!</p>
+            </div>
+        </section>
 
-    <!-- Ubicacion -->
-    <section id="ubicacion" class="section">
-      <h2>Ubicación</h2>
-      <p id="direccion-display"></p>
-      <a id="mapa-link" href="#" target="_blank" class="btn">Ver en Google Maps</a>
-    </section>
 
-    <!-- Horario -->
-    <section class="card">
-      <h2><i class="fas fa-clock"></i> Horario de atención</h2>
-      <ul id="horario-content"></ul>
-    </section>
+        <!-- Horario -->
+        <section class="card">
+            <h2><i class="fas fa-clock"></i> Horario de atención</h2>
+            <ul id="horario-content"></ul>
+        </section>
 
-    <!-- Servicio Social -->
-    <section class="card">
-      <h2><i class="fas fa-hands-helping"></i> Servicio Social</h2>
-      <p>Al cumplir el <strong>60% de tus créditos</strong>, deberás darte de alta para la prestación del Servicio Social en el semestre inmediato posterior y concluirlo antes de cubrir el total de los créditos especificados en cada área de formación del plan de estudios.</p>
-      
-      <p><strong>Liga de consulta:</strong> 
-        <a href="https://www.facebook.com/serv.social.cuc" target="_blank" class="btn-link">
+        <!-- Servicio Social -->
+        <section class="card">
+            <h2><i class="fas fa-hands-helping"></i> Servicio Social</h2>
+            <p>Al cumplir el <strong>60% de tus créditos</strong>, deberás darte de alta para la prestación del Servicio Social en el semestre inmediato posterior y concluirlo antes de cubrir el total de los créditos especificados en cada área de formación
+                del plan de estudios.</p>
+
+            <p><strong>Liga de consulta:</strong>
+                <a href="https://www.facebook.com/serv.social.cuc" target="_blank" class="btn-link">
           🔗 Facebook Servicio Social CUC
         </a>
-      </p>
+            </p>
 
-      <h3>Contacto</h3>
-      <ul>
-        <li><strong>Lic. Juventino Espinoza Castillo</strong></li>
-        <li>Puesto: Jefe de Unidad</li>
-        <li>Teléfono: <a href="tel:+523222262262">+52 322 226 2262</a></li>
-        <li>Correo electrónico: 
-          <a href="mailto:juventino.espinoza@cuc.udg.mx">juventino.espinoza@cuc.udg.mx</a>
-        </li>
-      </ul>
-    </section>
+            <h3>Contacto</h3>
+            <ul>
+                <li><strong>Lic. Juventino Espinoza Castillo</strong></li>
+                <li>Puesto: Jefe de Unidad</li>
+                <li>Teléfono: <a href="tel:+523222262262">+52 322 226 2262</a></li>
+                <li>Correo electrónico:
+                    <a href="mailto:juventino.espinoza@cuc.udg.mx">juventino.espinoza@cuc.udg.mx</a>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Trámites -->
-    <section class="card">
-      <h2><i class="fas fa-file-alt"></i> Trámites</h2>
-      <div id="tramites-content"></div>
-    </section>
+        <!-- Trámites -->
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Trámites</h2>
+            <div id="tramites-content"></div>
+        </section>
 
-    <!-- Reglamentos -->
-    <section class="card">
-      <h2><i class="fas fa-book"></i> Reglamentos de la UdeG</h2>
-      <p>Los reglamentos de la Universidad de Guadalajara establecen las normas generales de operación, derechos y obligaciones de los estudiantes, así como procedimientos académicos y administrativos.</p>
-      <p><a href="https://secgral.udg.mx/normatividad/general" target="_blank" class="btn-link">Acceder a los reglamentos</a></p>
-    </section>
+        <!-- Reglamentos -->
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reglamentos de la UdeG</h2>
+            <p>Los reglamentos de la Universidad de Guadalajara establecen las normas generales de operación, derechos y obligaciones de los estudiantes, así como procedimientos académicos y administrativos.</p>
+            <p><a href="https://secgral.udg.mx/normatividad/general" target="_blank" class="btn-link">Acceder a los reglamentos</a></p>
+        </section>
 
-    <!-- Justificantes de  Falta -->
-    <section class="card">
-    <h2><i class="fas fa-file-signature"></i> Justificantes de Faltas</h2>
-      <div id="reglamentos-content"></div>
-    </section>
+        <!-- Justificantes de  Falta -->
+        <section class="card">
+            <h2><i class="fas fa-file-signature"></i> Justificantes de Faltas</h2>
+            <div id="reglamentos-content"></div>
+        </section>
 
-    <!-- FAQ -->
-    <section class="card">
-      <h2><i class="fas fa-question-circle"></i> Preguntas frecuentes</h2>
-      <div id="faq-content"></div>
-    </section>
+        <!-- FAQ -->
+        <section class="card">
+            <h2><i class="fas fa-question-circle"></i> Preguntas frecuentes</h2>
+            <div id="faq-content"></div>
+        </section>
 
-  </main>
+    </main>
 
-  <footer class="footer">
-    Pagina gratuita · Coordinación de Contaduría Pública
-  </footer>
-
-  <script src="script.js"></script>
+    <footer class="footer">
+        Coordinación de Contaduría Pública
 
 
-  <script>
-    // === Modo Día/Noche ===
-    const toggleBtn = document.getElementById('toggle-theme');
-    const body = document.body;
+        <li><a href="mailto:iris.camba@cuc.udg.mx">iris.camba@cuc.udg.mx</a></li>
 
-    if(localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️ Modo Día';
-    } else {
-      body.classList.add('light-mode');
-    }
 
-    toggleBtn.addEventListener('click', () => {
-      if(body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        toggleBtn.textContent = '🌙 Modo Noche';
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        toggleBtn.textContent = '☀️ Modo Día';
-        localStorage.setItem('theme', 'dark');
-      }
-    });
+        <!-- Ubicacion -->
+        <section id="ubicacion" class="section">
+            <h2>Ubicación</h2>
+            <p id="direccion-display"></p>
+            <a id="mapa-link" href="#" target="_blank" class="btn">Ver en Google Maps</a>
+        </section>
 
-    // === Script loadData() ===
-    async function loadData() {
-      try {
-        const resp = await fetch('data.json');
-        const data = await resp.json();
+    </footer>
 
-        // Horario
-        const horarioEl = document.getElementById('horario-content');
-        horarioEl.innerHTML = '';
-        for (let dia in data.horario) {
-          const li = document.createElement('li');
-          li.textContent = `${capitalize(dia)}: ${data.horario[dia]}`;
-          horarioEl.appendChild(li);
+    <script src="script.js"></script>
+
+
+    <script>
+        // === Modo Día/Noche ===
+        const toggleBtn = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️ Modo Día';
+        } else {
+            body.classList.add('light-mode');
         }
 
-        // Trámites
-        const tramitesEl = document.getElementById('tramites-content');
-        tramitesEl.innerHTML = '';
-        data.tramites.forEach(t => {
-          const div = document.createElement('div');
-          div.classList.add('item-card');
-          div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
-
-          // Si hay enlace, crear botón
-          if (t.enlace) {
-            const btn = document.createElement('a');
-            btn.href = t.enlace;
-            btn.target = "_blank";
-            btn.textContent = "🔗 Ver más";
-            btn.classList.add('btn-link');
-            div.appendChild(document.createElement('br'));
-            div.appendChild(btn);
-          }
-
-           // Si hay documento, crear botón de descarga
-          if(t.documento){
-            const docBtn = document.createElement('a');
-            docBtn.href = t.documento;
-            docBtn.download = "";
-            docBtn.textContent = "📄 Descargar formato";
-            docBtn.classList.add('btn-link');
-            div.appendChild(document.createElement('br'));
-            div.appendChild(docBtn);
-          }
-
-          tramitesEl.appendChild(div);
+        toggleBtn.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                toggleBtn.textContent = '🌙 Modo Noche';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                toggleBtn.textContent = '☀️ Modo Día';
+                localStorage.setItem('theme', 'dark');
+            }
         });
+        async function loadData() {
+            try {
+                const resp = await fetch('data.json');
+                const data = await resp.json();
+
+                // Ubicación
+                const direccionEl = document.getElementById('direccion-display');
+                const mapaLinkEl = document.getElementById('mapa-link');
+
+                if (data.ubicacion) {
+                    direccionEl.textContent = data.ubicacion.direccion;
+                    mapaLinkEl.href = data.ubicacion.mapa_url;
+                }
+
+                // Horario
+                const horarioEl = document.getElementById('horario-content');
+                horarioEl.innerHTML = '';
+                for (let dia in data.horario) {
+                    const li = document.createElement('li');
+                    li.textContent = `${capitalize(dia)}: ${data.horario[dia]}`;
+                    horarioEl.appendChild(li);
+                }
+
+                // Trámites
+                const tramitesEl = document.getElementById('tramites-content');
+                tramitesEl.innerHTML = '';
+                data.tramites.forEach(t => {
+                    const div = document.createElement('div');
+                    div.classList.add('item-card');
+                    div.innerHTML = `<strong>${t.titulo}</strong><br>${t.descripcion}`;
+
+                    // Si hay enlace, crear botón
+                    if (t.enlace) {
+                        const btn = document.createElement('a');
+                        btn.href = t.enlace;
+                        btn.target = "_blank";
+                        btn.textContent = "🔗 Ver más";
+                        btn.classList.add('btn-link');
+                        div.appendChild(document.createElement('br'));
+                        div.appendChild(btn);
+                    }
+
+                    // Si hay documento, crear botón de descarga
+                    if (t.documento) {
+                        const docBtn = document.createElement('a');
+                        docBtn.href = t.documento;
+                        docBtn.download = "";
+                        docBtn.textContent = "📄 Descargar formato";
+                        docBtn.classList.add('btn-link');
+                        div.appendChild(document.createElement('br'));
+                        div.appendChild(docBtn);
+                    }
+
+                    tramitesEl.appendChild(div);
+                });
 
 
-        // Reglamentos
-        const reglamentosEl = document.getElementById('reglamentos-content');
-        reglamentosEl.innerHTML = '';
-        data.reglamentos.forEach(r => {
-          const p = document.createElement('p');
-          p.textContent = r;
-          reglamentosEl.appendChild(p);
-        });
+                // Reglamentos
+                const reglamentosEl = document.getElementById('reglamentos-content');
+                reglamentosEl.innerHTML = '';
+                data.reglamentos.forEach(r => {
+                    const p = document.createElement('p');
+                    p.textContent = r;
+                    reglamentosEl.appendChild(p);
+                });
 
-        // FAQ
-        const faqEl = document.getElementById('faq-content');
-        faqEl.innerHTML = '';
-        data.faq.forEach(f => {
-          const div = document.createElement('div');
-          div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
-          div.classList.add('item-card');
-          faqEl.appendChild(div);
-        });
+                // FAQ
+                const faqEl = document.getElementById('faq-content');
+                faqEl.innerHTML = '';
+                data.faq.forEach(f => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<strong>${f.pregunta}</strong><br>${f.respuesta}`;
+                    div.classList.add('item-card');
+                    faqEl.appendChild(div);
+                });
 
-        // Contacto (opcional)
-        if(document.getElementById('correo-display')) document.getElementById('correo-display').textContent = data.contacto.email;
-        if(document.getElementById('telefono-display')) document.getElementById('telefono-display').textContent = data.contacto.phone;
-        if(document.getElementById('whatsapp-display')) document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
+                // Contacto (opcional)
+                if (document.getElementById('correo-display')) document.getElementById('correo-display').textContent = data.contacto.email;
+                if (document.getElementById('telefono-display')) document.getElementById('telefono-display').textContent = data.contacto.phone;
+                if (document.getElementById('whatsapp-display')) document.getElementById('whatsapp-display').textContent = data.contacto.whatsapp;
 
-      } catch (err) {
-        console.error('Error al cargar data.json:', err);
-      }
-    }
-
-    function capitalize(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-
-    window.addEventListener('DOMContentLoaded', loadData);
-  </script>
-
+            } catch (err) {
+                console.error('Error al cargar data.json:', err);
+            }
+        }
+    </script>
 </body>
-</html>
 
+</html>

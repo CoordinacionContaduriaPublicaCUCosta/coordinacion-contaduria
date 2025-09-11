@@ -1,89 +1,86 @@
 {
-  "horario": {
-    "lunes": "9:00 a.m. - 6:00 p.m.",
-    "martes": "9:00 a.m. - 6:00 p.m.",
-    "miércoles": "9:00 a.m. - 6:00 p.m.",
-    "jueves": "9:00 a.m. - 6:00 p.m.",
-    "viernes": "9:00 a.m. - 6:00 p.m.",
-    "sábado": "Cerrado",
-    "domingo": "Cerrado"
-  },
-  "tramites": [
-    {
-      "titulo": "Toma de protesta",
-      "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+    "horario": {
+        "lunes": "9:00 a.m. - 6:00 p.m.",
+        "martes": "9:00 a.m. - 6:00 p.m.",
+        "miércoles": "9:00 a.m. - 6:00 p.m.",
+        "jueves": "9:00 a.m. - 6:00 p.m.",
+        "viernes": "9:00 a.m. - 6:00 p.m.",
+        "sábado": "Cerrado",
+        "domingo": "Cerrado"
     },
-    {
-      "titulo": "Solicitud de Licencia",
-      "descripcion": "Para solicitar la licencia, el alumno o alumna deberá entregar los documentos en original en las ventanillas de atención a Alumnos:\n- Solicitud de Licencia.\n- Ficha y recibo de pago bancario en original del trámite administrativo.\n- Constancia Médica (según la situación).\n- No tener adeudos en la Orden de Pago.\n- No tener materias reprobadas al momento de solicitarla.",
-      "enlace": "http://www.cuc.udg.mx/es/solicitud-de-licencia"
+    "tramites": [{
+            "titulo": "Toma de protesta",
+            "descripcion": "Envía un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+        },
+        {
+            "titulo": "Solicitud de Licencia",
+            "descripcion": "Para solicitar la licencia, el alumno o alumna deberá entregar los documentos en original en las ventanillas de atención a Alumnos:\n- Solicitud de Licencia.\n- Ficha y recibo de pago bancario en original del trámite administrativo.\n- Constancia Médica (según la situación).\n- No tener adeudos en la Orden de Pago.\n- No tener materias reprobadas al momento de solicitarla.",
+            "enlace": "http://www.cuc.udg.mx/es/solicitud-de-licencia"
+        },
+        {
+            "titulo": "Prácticas Profesionales",
+            "descripcion": "El alumno deberá realizar sus prácticas profesionales a partir del 70% de créditos cursados. Se realizan 2 convocatorias al año (pregunta fechas). Podrás realizarlas en instituciones o empresas con convenio vigente que soliciten practicantes.",
+            "enlace": "http://www.cuc.udg.mx/?q=convenios-de-practicas-profesionales"
+        },
+        {
+            "titulo": "Formación Integral - Créditos Extracurriculares",
+            "descripcion": "El alumno deberá desarrollar actividades extracurriculares que podrán consistir en cursos, seminarios, talleres, eventos culturales, deportivos, entre otros. Se registrarán en la historia académica del estudiante como formación integral y se le asignará un valor de 4 créditos.\n\nEl alumno podrá realizar la solicitud de reconocimiento de las actividades académicas en el momento que obtenga la acreditación de 12 actividades académicas desarrolladas en el Centro Universitario de la Costa. Para lo cual se deberán registrar en la materia llamada “FORMACION INTEGRAL”, y así cubrirá sus 4 créditos en el Área de Formación Optativa abierta.\n\nDeberás acudir con tu Coordinador de Carrera para iniciar los trámites ante las Comisiones Conjuntas de Educación y Revalidación de Estudios, Títulos y Grados y la Comisión de Condonaciones, Pensiones y Becas, para lo cual deberás entregar la siguiente documentación:\n\n- Oficio de solicitud del alumno.\n- Copia de la(s) constancias que acrediten la(s) actividades académicas.\n- Las constancias deberán ser expedidas y entregadas por la instancia organizadora del evento, del curso, taller, evento deportivo y cultural, etc.",
+            "documento": "docs/formato_de_formacion_integral.docx"
+        }
+    ],
+    "reglamentos": [
+        "Reglamento General de Evaluación y Promoción de Alumnos",
+        "Artículo 53. Los alumnos podrán justificar su falta de asistencia a clases por alguna de las siguientes causas:",
+        "I. Por enfermedad (con comprobante de haber acudido al IMSS);",
+        "II. Por el cumplimiento de una comisión conferida por autoridad universitaria, con conocimiento del Coordinador de Carrera.",
+        "III. Por causa de fuerza mayor justificada que impida al alumno asistir, a juicio del Coordinador de Carrera.",
+        "El máximo de faltas de asistencia a clases que se pueden justificar a un alumno no excederá del 20 % del total de horas establecidas en el programa de la materia."
+    ],
+    "faq": [{
+            "pregunta": "¿Deseo tomar protesta, qué necesito?",
+            "respuesta": "Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
+        },
+        {
+            "pregunta": "¿Cuál es el horario de atención?",
+            "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
+        },
+        {
+            "pregunta": "¿Ya te diste de alta en el IMSS?",
+            "respuesta": "Recuerda que es un derecho y obligatorio tenerlo vigente. (Para Desacargar el Documento debe usar  el Chat)",
+            "pdf": "docs/AFILIATE_AL_IMSS_2023.pdf"
+        },
+        {
+            "pregunta": "¿Necesitas tramitar alguna constancia?",
+            "respuesta": "Si necesitas tramitar una constancia, puedes consultar el instructivo. (Para Desacargar el Documento debe usar  el Chat)",
+            "pdf": "docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf"
+        },
+        {
+            "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, qué debes hacer?",
+            "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. (Para Desacargar el Documento debe usar  el Chat)",
+            "pdf": "docs/Denuncia_ante_la_fiscalia.pdf"
+        },
+        {
+            "pregunta": "¿Qué hago si no estoy de acuerdo en la evaluación de una materia?",
+            "respuesta": "El alumno podrá solicitar por escrito y de manera justificada, la revisión del resultado de su evaluación o de un examen al Jefe del Departamento que tenga a su cargo la materia de que se trata cuando considere que se ha cometido un error en su calificación.\n\nDicha revisión deberá solicitarla dentro de los tres días hábiles siguientes a la fecha en que se hayan publicado o notificado los resultados de la evaluación o examen.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículo 49)"
+        },
+        {
+            "pregunta": "¿Qué pasa si repruebo una materia?",
+            "respuesta": "El alumno que por cualquier circunstancia no logre una calificación aprobatoria en el periodo ordinario y en extraordinario, deberá repetir la materia en el ciclo escolar inmediato siguiente en que se ofrezca, teniendo la oportunidad de acreditarla durante el proceso de evaluación ordinaria o en el periodo extraordinario.\n\nEn caso de que el alumno no logre acreditar la materia en los términos de este artículo, será dado de baja.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículo 33)"
+        },
+        {
+            "pregunta": "¿Qué debo hacer si estoy en artículos 33 o 35?",
+            "respuesta": "El alumno que haya sido dado de baja conforme al artículo 33 de este ordenamiento podrá solicitar por escrito a la Comisión de Educación del Consejo de Centro o de Escuela, antes del inicio del ciclo inmediato siguiente en que haya sido dado de baja, una nueva oportunidad para acreditar la materia o materias que adeude.\n\nLa Comisión de Educación del Consejo de Centro o de Escuela podrá autorizar una nueva oportunidad para acreditar la materia o materias que adeude el alumno en el ciclo siguiente en que se ofrezcan la o las materias, el alumno tendrá la oportunidad de acreditar las materias que adeuda, sólo en el periodo de evaluación ordinaria, en caso de no presentarse al curso y no lograr una calificación aprobatoria, en todas y cada una de las materias que adeude, será dado de baja en forma automática y definitiva. Y se te aplicará art. 35.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículos 34, 35)"
+        }
+    ],
+    "contacto": {
+        "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],
+        "phone": ["Coordinacion +52 322 226 2318"],
+        "whatsapp": "523223224961",
+        "facebook": "https://www.facebook.com/LCOPCucosta"
     },
-    {
-      "titulo": "Prácticas Profesionales",
-      "descripcion": "El alumno deberá realizar sus prácticas profesionales a partir del 70% de créditos cursados. Se realizan 2 convocatorias al año (pregunta fechas). Podrás realizarlas en instituciones o empresas con convenio vigente que soliciten practicantes.",
-      "enlace": "http://www.cuc.udg.mx/?q=convenios-de-practicas-profesionales"
-    },
-    {
-      "titulo": "Formación Integral - Créditos Extracurriculares",
-      "descripcion": "El alumno deberá desarrollar actividades extracurriculares que podrán consistir en cursos, seminarios, talleres, eventos culturales, deportivos, entre otros. Se registrarán en la historia académica del estudiante como formación integral y se le asignará un valor de 4 créditos.\n\nEl alumno podrá realizar la solicitud de reconocimiento de las actividades académicas en el momento que obtenga la acreditación de 12 actividades académicas desarrolladas en el Centro Universitario de la Costa. Para lo cual se deberán registrar en la materia llamada “FORMACION INTEGRAL”, y así cubrirá sus 4 créditos en el Área de Formación Optativa abierta.\n\nDeberás acudir con tu Coordinador de Carrera para iniciar los trámites ante las Comisiones Conjuntas de Educación y Revalidación de Estudios, Títulos y Grados y la Comisión de Condonaciones, Pensiones y Becas, para lo cual deberás entregar la siguiente documentación:\n\n- Oficio de solicitud del alumno.\n- Copia de la(s) constancias que acrediten la(s) actividades académicas.\n- Las constancias deberán ser expedidas y entregadas por la instancia organizadora del evento, del curso, taller, evento deportivo y cultural, etc.",
-      "documento": "docs/formato_de_formacion_integral.docx"
-    }
-  ],
-  "reglamentos": [
-    "Reglamento General de Evaluación y Promoción de Alumnos",
-    "Artículo 53. Los alumnos podrán justificar su falta de asistencia a clases por alguna de las siguientes causas:",
-    "I. Por enfermedad (con comprobante de haber acudido al IMSS);",
-    "II. Por el cumplimiento de una comisión conferida por autoridad universitaria, con conocimiento del Coordinador de Carrera.",
-    "III. Por causa de fuerza mayor justificada que impida al alumno asistir, a juicio del Coordinador de Carrera.",
-    "El máximo de faltas de asistencia a clases que se pueden justificar a un alumno no excederá del 20 % del total de horas establecidas en el programa de la materia."
-  ],
-  "faq": [
-    {
-      "pregunta": "¿Deseo tomar protesta, qué necesito?",
-      "respuesta": "Debes enviar un correo-e a iris.camba@cuc.udg.mx y aida@cuc.udg.mx indicando tu nombre, código y modalidad de titulación."
-    },
-    {
-      "pregunta": "¿Cuál es el horario de atención?",
-      "respuesta": "Nuestro horario de atención es:\nLunes a Viernes: 9:00 a.m. - 6:00 p.m.\nSábado y Domingo: Cerrado"
-    },
-    {
-      "pregunta": "¿Ya te diste de alta en el IMSS?",
-      "respuesta": "Recuerda que es un derecho y obligatorio tenerlo vigente. (Para Desacargar el Documento debe usar  el Chat)",
-      "pdf": "docs/AFILIATE_AL_IMSS_2023.pdf"
-    },
-    {
-      "pregunta": "¿Necesitas tramitar alguna constancia?",
-      "respuesta": "Si necesitas tramitar una constancia, puedes consultar el instructivo. (Para Desacargar el Documento debe usar  el Chat)",
-      "pdf": "docs/NECESITAS_TRAMITAR_CONSTANCIAS_DIVERSAS.pdf"
-    },
-    {
-      "pregunta": "¿Extraviaste o te robaron tu credencial de estudiante, qué debes hacer?",
-      "respuesta": "Si extraviaste o te robaron tu credencial, debes reportarlo inmediatamente a la coordinación. (Para Desacargar el Documento debe usar  el Chat)",
-      "pdf": "docs/Denuncia_ante_la_fiscalia.pdf"
-    },
-    {
-      "pregunta": "¿Qué hago si no estoy de acuerdo en la evaluación de una materia?",
-      "respuesta": "El alumno podrá solicitar por escrito y de manera justificada, la revisión del resultado de su evaluación o de un examen al Jefe del Departamento que tenga a su cargo la materia de que se trata cuando considere que se ha cometido un error en su calificación.\n\nDicha revisión deberá solicitarla dentro de los tres días hábiles siguientes a la fecha en que se hayan publicado o notificado los resultados de la evaluación o examen.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículo 49)"
-    },
-    {
-      "pregunta": "¿Qué pasa si repruebo una materia?",
-      "respuesta": "El alumno que por cualquier circunstancia no logre una calificación aprobatoria en el periodo ordinario y en extraordinario, deberá repetir la materia en el ciclo escolar inmediato siguiente en que se ofrezca, teniendo la oportunidad de acreditarla durante el proceso de evaluación ordinaria o en el periodo extraordinario.\n\nEn caso de que el alumno no logre acreditar la materia en los términos de este artículo, será dado de baja.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículo 33)"
-    },
-    {
-      "pregunta": "¿Qué debo hacer si estoy en artículos 33 o 35?",
-      "respuesta": "El alumno que haya sido dado de baja conforme al artículo 33 de este ordenamiento podrá solicitar por escrito a la Comisión de Educación del Consejo de Centro o de Escuela, antes del inicio del ciclo inmediato siguiente en que haya sido dado de baja, una nueva oportunidad para acreditar la materia o materias que adeude.\n\nLa Comisión de Educación del Consejo de Centro o de Escuela podrá autorizar una nueva oportunidad para acreditar la materia o materias que adeude el alumno en el ciclo siguiente en que se ofrezcan la o las materias, el alumno tendrá la oportunidad de acreditar las materias que adeuda, sólo en el periodo de evaluación ordinaria, en caso de no presentarse al curso y no lograr una calificación aprobatoria, en todas y cada una de las materias que adeude, será dado de baja en forma automática y definitiva. Y se te aplicará art. 35.\n\n(Ver Reglamento de Promoción y Evaluación de Alumnos, Artículos 34, 35)"
-    }
-  ],
-  "contacto": {
-    "email": ["iris.camba@cuc.udg.mx", "aida@cuc.udg.mx"],
-    "phone": ["Coordinacion +52 322 226 2318"],
-    "whatsapp": "523223224961",
-    "facebook": "https://www.facebook.com/LCOPCucosta"
-  },
 
-  "ubicacion": {
-    "direccion": "Coordinación Académica, Centro Universitario de la Costa, Av. Universidad 203, Ixtapa, Puerto Vallarta, Jal.",
-    "mapa": "https://www.google.com/maps/place/20%C2%B042'16.7%22N+105%C2%B013'24.1%22W/@20.7046341,-105.2245595,19z/data=!4m7!1m2!2m1!1sCentro+Universitario+de+la+Costa+PUV!3m3!8m2!3d20.704637!4d-105.223358?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D"
-  }
-  
+    "ubicacion": {
+        "direccion": "Avenida Universidad 222, Colonia Las Artes, 48290 Puerto Vallarta, Jalisco.",
+        "mapa_url": "https://www.google.com/maps/place/CUCosta+Universidad+de+Guadalajara/@20.6558661,-105.215535,17z/data=!3m1!4b1!4m6!3m5!1s0x842144b6118b14e9:0x868b3d68e1467554!8m2!3d20.6558611!4d-105.2129601!16s%2Fg%2F125pyn3p3?entry=ttu"
+    }
 }
