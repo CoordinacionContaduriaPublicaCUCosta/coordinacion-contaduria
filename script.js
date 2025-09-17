@@ -14,7 +14,7 @@ async function loadData() {
 
     // Ubicación
     document.getElementById('direccion-display').textContent = data.ubicacion.direccion;
-    document.getElementById('mapa-link').href = data.ubicacion.mapa;
+    document.getElementById('mapa-link').href = data.ubicacion.mapa_url;
 
     // Trámites
     const tramitesEl = document.getElementById('tramites-content');
