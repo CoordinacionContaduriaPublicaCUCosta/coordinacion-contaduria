@@ -80,7 +80,8 @@
     },
 
     "ubicacion": {
-        "direccion": "Avenida Universidad 222, Colonia Las Artes, 48290 Puerto Vallarta, Jalisco.",
-        "mapa_url": "https://www.google.com/maps/place/CUCosta+Universidad+de+Guadalajara/@20.6558661,-105.215535,17z/data=!3m1!4b1!4m6!3m5!1s0x842144b6118b14e9:0x868b3d68e1467554!8m2!3d20.6558611!4d-105.2129601!16s%2Fg%2F125pyn3p3?entry=ttu"
+    "direccion": "Avenida Universidad 222, Colonia Las Artes, 48290 Puerto Vallarta, Jalisco.",
+    "mapa_url": "https://www.google.com/maps/place/CUCosta+Universidad+de+Guadalajara/@20.6558661,-105.215535,17z/data=!3m1!4b1!4m6!3m5!1s0x842144b6118b14e9:0x868b3d68e1467554!8m2!3d20.6558611!4d-105.2129601!16s%2Fg%2F125pyn3p3?entry=ttu"
     }
+
 }
