@@ -36,6 +36,17 @@ async function loadData() {
         div.appendChild(btn);
       }
 
+      // Si hay documento, crear botón de descarga
+      if (t.documento) {
+        const btnDoc = document.createElement('a');
+        btnDoc.href = t.documento;
+        btnDoc.download = ""; // fuerza descarga
+        btnDoc.textContent = "⬇️ Descargar formato";
+        btnDoc.classList.add('btn-link');
+        div.appendChild(document.createElement('br'));
+        div.appendChild(btnDoc);
+      }
+
       tramitesEl.appendChild(div);
     });
 
